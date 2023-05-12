@@ -31,15 +31,22 @@ body {
 .form-container label {
 	display: block;
 	font-size: 1.5em;
-	margin: 10px 0;
+	margin: 5px 0;
 }
 
 .form-container input {
+	border: none;
+	border-bottom: 2px solid #ff3739;
 	height: 30px;
+	padding: 10px;
+}
+
+.form-container input:focus {
+	border: none;
 }
 
 .form-group {
-	padding: 10px 0;
+	padding: 5px 0;
 }
 
 .btn {
