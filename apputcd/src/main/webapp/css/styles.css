@@ -90,6 +90,7 @@ body {
 	margin-top: 2px;
 }
 
+/* Small devices */
 @media screen and (min-width: 375px) {
   body {
     padding-top: 50px;
@@ -107,5 +108,16 @@ body {
   .btn {
   	margin-top: 25px;
   	width: 100%;
+  }
+}
+/* For iPhone 4 with 320px(w) and 480px(h)*/
+@media screen and (max-height: 480px) {
+	body {
+		font-size: 0.8em;
+	}
+	.container_img img {
+		height: 90px;
+  		padding-bottom: 10px;
+  		width: 90px;
   }
 }
