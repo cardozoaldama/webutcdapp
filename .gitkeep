@@ -1,0 +1,3 @@
+# Keeping some files
+# For dependencies of JSTL-1.2.jar and postgresql-42.2.27
+./apputcd/src/main/webapp/WEB-INF/lib/

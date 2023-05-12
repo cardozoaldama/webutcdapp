@@ -1,0 +1,100 @@
+body {
+	background-image: url("./img/background.jpg");
+}
+
+.container {
+	font-family: Arial, serif;
+	margin: auto 0;
+}
+
+.container_img {
+	margin: 20px auto;
+	text-align: center;
+}
+
+.container_img img {
+	height: 150px;
+	width: 150px;
+}
+
+.form-container {
+	/*height: 30%;*/
+	text-align: center;
+	padding: 0 10px;
+}
+
+.form-container h2 {
+	font-size: 2em;
+	margin: 5px 0;
+}
+
+.form-container label {
+	display: block;
+	font-size: 1.5em;
+	margin: 10px 0;
+}
+
+.form-container input {
+	height: 30px;
+}
+
+.form-group {
+	padding: 10px 0;
+}
+
+.btn {
+	background-color: #ff3739;
+	border: none;
+	border-radius: 3px;
+	color: #000;
+	font-weight: bold; 
+	height: 50px;
+	margin-top : 10px;
+	width: 80%;
+}
+
+.btn:hover {
+	background-color: #ffd0e8;
+	cursor: pointer;
+}
+
+.btn:active {
+	background-color: #ffe;
+	color: #ff3739;
+	cursor: pointer;
+}
+
+.btn:disabled {
+	background-color: #fff0f8;
+	color: #ffb5b6;
+	cursor: not-allowed;
+}
+
+#alertLogin {
+	background-color: #ff8888;
+	color: #ed333b;
+	text-align: center;
+	padding: 10px 0;
+}
+
+.help-block {
+	display: block;
+	color: #ed333b;
+	margin-top: 2px;
+}
+
+@media screen and (min-width: 375px) {
+  body {
+    padding-top: 50px;
+  }
+  #formLogin {
+  	margin: 0 auto;
+  	width: 256px;
+  }
+  #formLogin input {
+  	width: 100%
+  }
+  .btn {
+  	width: 100%;
+  }
+}
