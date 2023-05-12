@@ -2,10 +2,6 @@ html {
 	height: 100%; 
 }
 
-body {
-	background-image: url("./img/background.jpg");
-}
-
 .container {
 	align-content: space-around;
 	align-items: center;
