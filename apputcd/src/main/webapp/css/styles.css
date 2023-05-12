@@ -93,9 +93,10 @@ body {
 /* Small devices */
 @media screen and (min-width: 375px) {
   body {
-    padding-top: 80px;
+    padding-top: 50px;
   }
   .container_img {
+  	margin: 0 auto;
   	padding-bottom: 10px;
   }
   #formLogin {
