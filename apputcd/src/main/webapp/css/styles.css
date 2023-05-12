@@ -99,7 +99,7 @@ html {
 }
 
 /* iPhone 4 support */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 320px) {
 	body {
 		font-size: 0.8em;
 	}
@@ -114,15 +114,17 @@ html {
   	.form-container h2 {
   		margin: 5px;
   	}
+  	.form-group label {
+  		margin: 3px 0;
+  	}
   	.form-control {
-  		padding-top: 10px;
   		width: 80%;
   	}
   	.btn {
   		margin-top: 15px;
   	}
 }
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 375px) {
   .container_img {
   	margin: 0 auto;
   }
