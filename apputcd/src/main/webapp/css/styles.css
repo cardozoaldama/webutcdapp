@@ -1,3 +1,7 @@
+html {
+	height: 100%; 
+}
+
 body {
 	background-image: url("./img/background.jpg");
 }
@@ -8,12 +12,13 @@ body {
 	display: flex;
 	font-family: Arial, serif;
 	flex-direction: column;
-	justify-content: space-between;
+	flex-wrap: wrap;
+	min-height: 100vh;
+	justify-content: center;
 }
 
 .container_img {
-	display: flex;
-	margin: 20px auto;
+	/*margin: 20px auto;*/
 	text-align: center;
 }
 
@@ -25,25 +30,25 @@ body {
 .form-container {
 	/*height: 30%;*/
 	text-align: center;
-	padding: 0 10px;
+	/*padding: 0 10px;*/
 }
 
 .form-container h2 {
 	font-size: 2em;
-	margin: 5px 0;
+	/*margin: 5px 0;*/
 }
 
 .form-container label {
 	display: block;
 	font-size: 1.5em;
-	margin: 5px 0;
+	/*margin: 5px 0;*/
 }
 
 .form-container input {
 	border: none;
 	border-bottom: 2px solid #ff3739;
 	height: 30px;
-	padding: 10px;
+	/*padding: 10px;*/
 }
 
 .form-container input:focus {
@@ -61,7 +66,7 @@ body {
 	color: #000;
 	font-weight: bold; 
 	height: 50px;
-	margin-top : 10px;
+	/*margin-top : 10px;*/
 	width: 80%;
 }
 
@@ -95,7 +100,31 @@ body {
 	margin-top: 2px;
 }
 
-/* Small devices */
+/* iPhone 4 support */
+@media screen and (max-height: 480px) {
+	body {
+		font-size: 0.8em;
+	}
+	.container_img img {
+		height: 130px;
+  		/*padding-bottom: 10px;*/
+  		width: 130px;
+  	}
+  	.form-container {
+  		width: 75%;
+  	}
+  	.form-container h2 {
+  		margin: 5px;
+  	}
+  	.form-control {
+  		padding-top: 10px;
+  		width: 80%;
+  	}
+  	.btn {
+  		margin-top: 15px;
+  	}
+}
+/*
 @media screen and (min-width: 375px) {
   body {
     padding-top: 50px;
@@ -119,17 +148,6 @@ body {
   	margin: 10px auto;
   }
 }
-/* For iPhone 4 with 320px(w) and 480px(h)*/
-@media screen and (max-height: 480px) {
-	body {
-		font-size: 0.8em;
-	}
-	.container_img img {
-		height: 90px;
-  		padding-bottom: 10px;
-  		width: 90px;
-  }
-}
 
 @media screen and (min-width: 768px){
 	#formLogin {
@@ -142,3 +160,4 @@ body {
 		width: 40%;
 	}
 }
+*/
