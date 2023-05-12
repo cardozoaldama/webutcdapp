@@ -90,7 +90,9 @@ body {
 #alertLogin {
 	background-color: #ff8888;
 	color: #ed333b;
+	margin: 0;
 	text-align: center;
+	width: 75%;
 	padding: 10px 0;
 }
 
