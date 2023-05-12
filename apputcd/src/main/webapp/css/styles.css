@@ -125,3 +125,15 @@ body {
   		width: 90px;
   }
 }
+
+@media screen and (min-width: 768px){
+	#formLogin {
+		width: 45%;
+	}
+}
+
+@media screen and (min-width: 1024px){
+	#formLogin {
+		width: 40%;
+	}
+}
