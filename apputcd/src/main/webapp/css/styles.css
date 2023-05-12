@@ -35,13 +35,13 @@ body {
 
 .form-container h2 {
 	font-size: 2em;
-	/*margin: 5px 0;*/
+	margin: 5px 0;
 }
 
 .form-container label {
 	display: block;
 	font-size: 1.5em;
-	/*margin: 5px 0;*/
+	margin: 10px 0;
 }
 
 .form-container input {
@@ -101,7 +101,7 @@ body {
 }
 
 /* iPhone 4 support */
-@media screen and (max-height: 480px) {
+@media screen and (max-width: 480px) {
 	body {
 		font-size: 0.8em;
 	}
@@ -124,21 +124,20 @@ body {
   		margin-top: 15px;
   	}
 }
-/*
-@media screen and (min-width: 375px) {
-  body {
-    padding-top: 50px;
-  }
+@media screen and (max-width: 480px) {
   .container_img {
   	margin: 0 auto;
-  	padding-bottom: 10px;
+  }
+  .form-container {
+  	width: 75vw;
   }
   #formLogin {
   	margin: 0 auto;
   	width: 90%;
   }
   #formLogin input {
-  	width: 80%;
+  	width: 90%;
+  	margin-top: 15px;
   }
   .btn {
   	margin-top: 25px;
@@ -160,4 +159,3 @@ body {
 		width: 40%;
 	}
 }
-*/
