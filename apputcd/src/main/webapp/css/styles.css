@@ -2,10 +2,6 @@ html {
 	height: 100%; 
 }
 
-body {
-	background: #fae9e9;
-}
-
 .container {
 	align-content: space-around;
 	align-items: center;
