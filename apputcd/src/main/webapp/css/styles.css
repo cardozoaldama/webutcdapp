@@ -63,7 +63,7 @@ html {
 	display: block;
 	font-weight: bold; 
 	height: 50px;
-	/*margin-top : 10px;*/
+	margin: 10px auto;
 	width: 80%;
 }
 
@@ -120,9 +120,6 @@ html {
   	}
   	.form-control {
   		width: 80%;
-  	}
-  	.btn {
-  		margin-top: 15px;
   	}
 }
 @media screen and (min-width: 375px) {
