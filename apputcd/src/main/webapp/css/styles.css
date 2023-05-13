@@ -149,13 +149,35 @@ html {
 }
 
 @media screen and (min-width: 768px){
+	body {
+		background: #fae9e9;
+	}
+	.container_img img {
+		height: 250px;
+		width: 250px;
+	}
 	#formLogin {
-		width: 45%;
+		width: 75%;
+	}
+	.form-control {
+		padding: 10px;
 	}
 }
 
 @media screen and (min-width: 1024px){
+	body {
+		font-size: 1.5em;
+	}
 	#formLogin {
-		width: 40%;
+		width: 80%;
+	}
+	.form-control {
+		padding: 15px;
+	}
+	.btn {
+		display: block;
+		padding: 10px;
+		height: 80px;
+		margin: 25px 0;
 	}
 }
