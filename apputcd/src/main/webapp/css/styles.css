@@ -60,6 +60,7 @@ html {
 	border: none;
 	border-radius: 3px;
 	color: #000;
+	display: block;
 	font-weight: bold; 
 	height: 50px;
 	/*margin-top : 10px;*/
@@ -161,7 +162,12 @@ html {
 		width: 75%;
 	}
 	.form-control {
+		padding: 15px;
+	}
+	.btn {
 		padding: 10px;
+		height: 80px;
+		margin: 25px 0;
 	}
 }
 
@@ -173,10 +179,9 @@ html {
 		width: 80%;
 	}
 	.form-control {
-		padding: 15px;
+		padding: 20px;
 	}
 	.btn {
-		display: block;
 		padding: 10px;
 		height: 80px;
 		margin: 25px 0;
