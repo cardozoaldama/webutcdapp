@@ -10,6 +10,7 @@
 		<link rel="stylesheet" href="./css/principal.css">
 		<script src="js/bootstrap.min.js"></script>
 		<title>Principal</title>
+		<link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
 	</head>
 	<body>
 		<%-- 	<jsp:include page="encabezado.jsp" />
@@ -18,7 +19,7 @@
 		<nav class="navbar navbar-dark bg-dark fixed-top">
 			<div class="container-fluid">
 				<a class="navbar-brand" href="#">Bienvenido
-					${sessionScope.usuario.nombre} a Sistema de quejas de alumbrado público</a>
+					${sessionScope.usuario.nombre} al Sistema de Quejas de Alumbrado Público</a>
 				<button class="navbar-toggler" type="button"
 					data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
 					aria-controls="offcanvasDarkNavbar">
