@@ -2,6 +2,19 @@
 
 Este es un repositorio en el cual se aloja un proyecto que se nos ha asignado como trabajo práctico para entregarlo posteriormente, en la parcial de los exámenes, parte de este trabajo. En la etapa final, hay que entregar el trabajo completo y exponerlo con los demás compañeros del curso, incluso con otros compañeros de otros cursos que están cursando la misma carrera.
 
+## Dependencias antes de instalar
+
+Primero hay que tener algunos elementos clave antes usar el proyecto para tus fines. Si solamente necesitas ver el código fuente y hacer otras acciones que no necesites un sistema de gestor de bases de datos, adelante, porque tal vez no necesites instalarte PostgreSQL 15, 14, o 13. Sin embargo, si quieres ejecutarlo como nosotros lo haríamos acorde a los objetivos trazados del docente, entonces deberás seguir ciertos pasos para ejecutarlos sin problemas.
+
+- Tener instalado el sistema de gestor de base de datos como `PostgreSQL 15` o `PostgreSQL 14`.
+- Es opcional, pero lo usamos. Tener instalado el gestor gráfico `Pgadmin 6` o `Pgadmin 7`. Incluso se ha hecho pruebas con gestores más viejos como el `Pgadmin 4`.
+- Tener instalado `Eclipse` en su última versión para `Java Enterprise Edition`. Incluso usar portables, pero aclarar que funciona en cualquier IDE.
+- Tener instalado `Git`, indispensable.
+- Tener instalado el `Java JDK 17`, el `Java JDK 1.8`, y el `Java JDK 1.7u40`. Precisamente se nos ha asignado esta versión de `Java JDK 7u40` por alguna razón.
+- Tener instalado el `Tomcat v7.0-60` (que viene con el Eclipse).
+- Poseer los conectores: `jstl-1.2.jar` y el conector para *postgres* el `postgresql-42.2.27.jar`. Estos ya vienen incluídos en el repositorio cuando usted lo clone.
+- Tener a la mano la carpeta `Queries` para la creación e inserción para la bases de datos. Todos escritos con el formato PostgreSQL.
+
 ## Preguntas
 
 ### ¿De qué se trata el proyecto?
