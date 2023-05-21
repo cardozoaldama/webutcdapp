@@ -49,6 +49,17 @@ port = 5432
 
 Por último, hay que **reiniciar** los servicios de *postgres* para luego utilizar las nuevas configuraciones.
 
+### Pgadmin 4, 6, o 7
+
+No es difícil la instalación de Pgadmin. En mi caso, poseo la versión 6 instalada mediante `pip install`, ya que la versión que me ofrece mi distribución (OpenSUSE) no me acabó de convencer (pero funciona igual). Una vez que tengas instalado, puedes ejecutar todos los scripts de SQL.
+
+- Primero ejecutar el script `create_database.sql` para crear la base de datos principal, aunque deberías tú cambiar el `OWNER` por tu *username*, o, en su defecto por `postgres`.
+- Segundo, ejecutar cada uno de aquellos *scripts* que empiecen con `create_*.sql`. Obviamente cambiando el *username OWNER* por el tuyo.
+- Tercero, ejecutar cada uno de aquellos *scripts* que empiecen con `insert_*.sql`. Obviamente cambiando el *username OWNER* por el tuyo.
+
+Cabe aclarar que puedes cambiar las tablas e inserciones con los datos que tú quieras, y luego podrían surgir problemas que se podrían solucionar.
+En la tabla `usuario` tiene que estar los datos más simples posibles para la preferencia de poder ingresar al sistema sin tanto escándalo.
+
 ## Preguntas
 
 ### ¿De qué se trata el proyecto?
