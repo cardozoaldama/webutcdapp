@@ -60,8 +60,21 @@ No es difícil la instalación de Pgadmin. En mi caso, poseo la versión 6 insta
 Cabe aclarar que puedes cambiar las tablas e inserciones con los datos que tú quieras, y luego podrían surgir problemas que se podrían solucionar.
 En la tabla `usuario` tiene que estar los datos más simples posibles para la preferencia de poder ingresar al sistema sin tanto escándalo.
 
-## Preguntas
 
+### Clonación del repositorio con Eclipse
+
+Instalar Eclipse, Git, y los JDK no son nada difíciles. Incluso con Linux es más fácil instalar Git y los JDK con la terminal de comandos. Sin embargo, yo recomiendo instalar Eclipse de su sitio web oficial y elegir la opción de Eclipse para **Java EE**. Así podrás poseer de todas las herramientas que necesites.
+
+Abrir el Eclipse creando un espacio de trabajo en donde deseas, crearemos un servidor Tomcat v7.0 con el *Runtime* del Java JDK 1.7u40, ya que otras versiones posteriores me han dado problemas por alguna razón. Dentro del *overview* del servidor, colocar en los *Timeouts* del *Start* y *Stop* en 500, y luego en sus parámetros en *Open Launch Configuration* colocar la siguiente línea al final y con un espacio: " `-Xms512m -Xmx512m -XX:MaxPermSize=256M`".
+
+Siguiendo con el Eclipse, podemos habilitar la perspectiva de Git y usar la opción de `Clonar un repositorio`. Lo que pueden hacer es clonar este repositorio con Git en la terminal y añadirlo localmente desde Eclipse, ya que si lo haces directamente en Eclipse la opción de `Clonar un repositorio`, pueda que te pida credenciales.
+
+Si es que no deseas hacer seguimiento el proyecto, ni tampoco no estás interesado/a de ver los cambios a través del tiempo, puedes descargar el repositorio en los diversos formatos `.jar` o `.war` o en `.zip` e importarlos en Eclipse. También podrían funcionar.
+
+Si te aparece algunos errores, por ejemplo, puedes habilitar ciertas cosas en el *Build Path* y asegurar que el Tomcat v7.0 que has creado anteriormente esté habilitado. Así el error tendría que desaparecer.
+
+Si todo te ha funcionado, entonces podremos proseguir. Y si algo no te ha funcionado, Google es tu mayor aliado para estas ocaciones, o puedes generar un *Issue*, ¡y estaremos encantados en ayudar!
+## Preguntas
 ### ¿De qué se trata el proyecto?
 
 El proyecto se trata de realizar un sistema web que posee un formulario de ingreso, y luego del ingreso, un menú en el cual se puede interactuar parte de ese sistema. Se puede decir que el objetivo final de este sistema es poseer un formulario en el cual un usuario registrado pueda ingresar datos para quejarse sobre un alumbrado público de su zona. Básicamente es una réplica idéntica al formulario de la [ANDE: Reclamo de alumbrado público](https://www.ande.gov.py/servicios/), aunque con pequeñas modificaciones y adaptados a este sistemas.
