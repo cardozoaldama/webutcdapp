@@ -75,6 +75,19 @@ Si te aparece algunos errores, por ejemplo, puedes habilitar ciertas cosas en el
 
 Si todo te ha funcionado, entonces podremos proseguir. Y si algo no te ha funcionado, Google es tu mayor aliado para estas ocaciones, o puedes generar un *Issue*, ¡y estaremos encantados en ayudar!
 
+### Antes de ejecutar el Tomcat
+
+Antes de ejecutar el Tomcat para probar el proyecto, primero tienes que verificar que en el archivo `Conexion.java` ubicado en *Java Resources and /src/main/java* estén los parámetros acorde a tu base de datos que habías creado anteriormente. Tienes que poner tu *username* y tu *clave* tal cual cuando entrarás a su usuario, y también colocar al final de la línea de la constante **URL** la base de datos que está alojado tu tabla *usuario*. Por ejemplo:
+
+```
+	// Mi base de datos se llama "progi" y usuario y contraseña son los siguientes:
+	private static final String URL = "jdbc:postgresql://localhost:5432/progi";
+	private static final String USUARIO = "postgres";
+	private static final String CLAVE = "admin";
+```
+
+Ahora sí ya estamos listos para poder conectarnos a Tomcat y poder experimentar del proyecto.
+
 ## Preguntas
 
 ### ¿De qué se trata el proyecto?
