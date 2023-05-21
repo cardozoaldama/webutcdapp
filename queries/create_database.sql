@@ -4,6 +4,7 @@
 
 CREATE DATABASE "WebAppDB"
     WITH
+    -- Change to your username of preference.
     OWNER = fcardozo
     ENCODING = 'UTF8'
     LC_COLLATE = 'en_US.UTF-8'
