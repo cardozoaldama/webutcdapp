@@ -74,7 +74,9 @@ Si es que no deseas hacer seguimiento el proyecto, ni tampoco no estás interesa
 Si te aparece algunos errores, por ejemplo, puedes habilitar ciertas cosas en el *Build Path* y asegurar que el Tomcat v7.0 que has creado anteriormente esté habilitado. Así el error tendría que desaparecer.
 
 Si todo te ha funcionado, entonces podremos proseguir. Y si algo no te ha funcionado, Google es tu mayor aliado para estas ocaciones, o puedes generar un *Issue*, ¡y estaremos encantados en ayudar!
+
 ## Preguntas
+
 ### ¿De qué se trata el proyecto?
 
 El proyecto se trata de realizar un sistema web que posee un formulario de ingreso, y luego del ingreso, un menú en el cual se puede interactuar parte de ese sistema. Se puede decir que el objetivo final de este sistema es poseer un formulario en el cual un usuario registrado pueda ingresar datos para quejarse sobre un alumbrado público de su zona. Básicamente es una réplica idéntica al formulario de la [ANDE: Reclamo de alumbrado público](https://www.ande.gov.py/servicios/), aunque con pequeñas modificaciones y adaptados a este sistemas.
