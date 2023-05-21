@@ -15,6 +15,40 @@ Primero hay que tener algunos elementos clave antes usar el proyecto para tus fi
 - Poseer los conectores: `jstl-1.2.jar` y el conector para *postgres* el `postgresql-42.2.27.jar`. Estos ya vienen incluídos en el repositorio cuando usted lo clone.
 - Tener a la mano la carpeta `Queries` para la creación e inserción para la bases de datos. Todos escritos con el formato PostgreSQL.
 
+## Instalación
+
+### Configuración de Postgres
+
+Una vez cumplido las dependencias necesarias, podemos hacer el proceso de instalación. Lo primero que hay que hacer es tener el servidor de Postgres activado y que pueda permitir conexiones para gestionarlos y poder acceder a ellos. En el siguiente ejemplo podemos colocar los siguientes parámetros en el archivo `pg_hba.conf`:
+
+```
+# "local" is for Unix domain socket connections only
+local   all             postgres                                peer
+local   all             all                                     md5
+# IPv4 local connections:
+host    all             all             127.0.0.1/32            md5
+# IPv6 local connections:
+host    all             all             ::1/128                 md5
+```
+
+Y luego, en el archivo `postgresql.conf` quitar los comentarios de los siguientes parámetros:
+
+*Antes:* 
+
+```
+# listen_addresses = '*'
+# port = 5432
+```
+
+*Después:* 
+
+```
+listen_addresses = '*'
+port = 5432
+```
+
+Por último, hay que **reiniciar** los servicios de *postgres* para luego utilizar las nuevas configuraciones.
+
 ## Preguntas
 
 ### ¿De qué se trata el proyecto?
