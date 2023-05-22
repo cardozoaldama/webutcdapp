@@ -122,6 +122,9 @@ body {
 	.container {
 		padding: 0;
 	}
+	.menu_container__title {
+  		display: block;
+  	}
 	.menu_container__img {
 		height: 120px;
   		width: 120px;
@@ -139,6 +142,9 @@ body {
 	.container {
 		padding: 0;
 	}
+	.menu_container__title {
+  		display: block;
+  	}
 	.menu_container__img {
 		height: 140px;
   		width: 140px;
@@ -157,6 +163,9 @@ body {
 		height: 200px;
   		width: 200px;
   	}
+  	.menu_container__title {
+  		display: block;
+  	}
   	.button__link {
   		padding: 20px 0;
   	}
@@ -171,6 +180,9 @@ body {
 		height: 200px;
   		width: 200px;
   	}
+  	.menu_container__title {
+  		display: block;
+  	}
   	.button__link {
   		padding: 20px 0;
   	}
@@ -184,6 +196,9 @@ body {
 	.menu_container__img {
 		height: 250px;
   		width: 250px;
+  	}
+  	.menu_container__title {
+  		display: block;
   	}
   	.button__link {
   		padding: 25px 0;
