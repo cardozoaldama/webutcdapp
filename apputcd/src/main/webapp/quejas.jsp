@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" type="text/css" href="./css/normalize.css">
 		<link rel="stylesheet" href="css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="./css/principal.css">
+		<link rel="stylesheet" type="text/css" href="./css/quejas.css">
 		<script src="js/bootstrap.min.js"></script>
 		<link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
 		<title>Quejas de alumbrado público</title>
