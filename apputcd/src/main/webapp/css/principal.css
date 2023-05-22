@@ -207,3 +207,37 @@ body {
   		font-size: 1.7em;
   	}
 }
+
+/* Laptop MDPi support */
+@media screen and (min-width: 1280px) {
+	.menu_container__img {
+		height: 150px;
+  		width: 150px;
+  	}
+  	.menu_container__title {
+  		display: block;
+  	}
+  	.button__link {
+  		padding: 10px 0;
+  	}
+  	.button__link-text {
+  		font-size: 1.5em;
+  	}
+}
+
+/* Laptop HiDPi support */
+@media screen and (min-width: 1440px) {
+	.menu_container__img {
+		height: 250px;
+  		width: 250px;
+  	}
+  	.menu_container__title {
+  		display: block;
+  	}
+  	.button__link {
+  		padding: 25px 0;
+  	}
+  	.button__link-text {
+  		font-size: 1.7em;
+  	}
+}
