@@ -178,3 +178,17 @@ body {
   		font-size: 1.5em;
   	}
 }
+
+/* iPad Pro support */
+@media screen and (min-width: 1024px) {
+	.menu_container__img {
+		height: 250px;
+  		width: 250px;
+  	}
+  	.button__link {
+  		padding: 25px 0;
+  	}
+  	.button__link-text {
+  		font-size: 1.7em;
+  	}
+}
