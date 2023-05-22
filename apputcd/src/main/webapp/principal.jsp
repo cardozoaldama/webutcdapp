@@ -51,6 +51,8 @@
 		</nav>
 		<div class="container">
 			<div class="menu_container">
+				<img class="menu_container__img" src="./img/android-chrome-512x512.png" alt="Logotipo de la empresa">
+				<p class="menu_container__title">Menú de opciones</p>
 				<div class="button"><a class="button__link" href="principal.jsp">Inicio</a></div>
 				<div class="button"><a class="button__link" href="quejas.jsp">Ingresar una queja</a></div>
 				<div class="button"><a class="button__link" href="#">Generar un informe</a></div>
