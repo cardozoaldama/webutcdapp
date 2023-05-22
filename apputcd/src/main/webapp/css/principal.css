@@ -117,6 +117,22 @@ body {
   	}
 }
 
+/* iPhone 6 support */
+@media screen and (max-width: 375px) {
+	.container {
+		padding: 0;
+	}
+	.menu_container__img {
+		height: 120px;
+  		width: 120px;
+  	}
+  	.button__link {
+  		padding: 10px 0;
+  	}
+  	.button__link-text {
+  		font-size: 1.1em;
+  	}
+}
 
 
 
