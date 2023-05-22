@@ -37,3 +37,15 @@ body {
 	font-size: 2em;
 	font-weight: 700;
 }
+
+.button {
+	margin: 10px auto;
+}
+
+.button__link {
+	background-color: #ccc;
+	display: block;
+	text-align: center;
+	padding: 20px 0;
+	width: 300px;
+}
