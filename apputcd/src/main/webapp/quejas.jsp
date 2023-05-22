@@ -49,6 +49,51 @@
 				</div>
 			</div>
 		</nav>
-		<div>Hola</div>	
+		<div class="container">
+			<h1 class="container_title">Ingresar una queja</h1>
+			<div class="form_container">
+				<div class="label_container">
+					<label class="label_container__label">Nombre:</label>
+					<input type="text" class="label_container__text">
+				</div>
+				<div class="label_container">
+					<label class="label_container__label">Apellido:</label>
+					<input type="text" class="label_container__text">
+				</div>
+				<div class="label_container">
+					<label class="label_container__label">Teléfono:</label>
+					<input type="text" class="label_container__text">
+				</div>
+				<div class="label_container">
+					<label class="label_container__label">NIS:</label>
+					<input type="text" class="label_container__text">
+				</div>
+				<div class="label_container">
+					<label class="label_container__label">Departamento:</label>
+					<input type="text" class="label_container__text">
+				</div>
+				<div class="label_container">
+					<label class="label_container__label">Ciudad:</label>
+					<input type="text" class="label_container__text">
+				</div>
+				<div class="label_container">
+					<label class="label_container__label">Barrio:</label>
+					<input type="text" class="label_container__text">
+				</div>
+				<div class="label_container">
+					<label class="label_container__label">Dirección:</label>
+					<input type="text" class="label_container__text">
+				</div>
+				<div class="label_container">
+					<label class="label_container__label">Correo electrónico:</label>
+					<input type="text" class="label_container__text">
+				</div>
+				<div class="label_container">
+					<label class="label_container__label">Referencias para llegar al lugar:</label>
+					<textarea class="label_container__textarea"></textarea>
+				</div>
+				<button class="button_send">Enviar formulario</button>
+			</div>
+		</div>
 	</body>
 </html>
