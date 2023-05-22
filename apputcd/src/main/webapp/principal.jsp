@@ -54,10 +54,10 @@
 				<div class="menu_container">
 					<img class="menu_container__img" src="./img/android-chrome-512x512.png" alt="Logotipo de la empresa">
 					<p class="menu_container__title">Menú de opciones</p>
-					<div class="button"><a class="button__link" href="principal.jsp">Inicio</a></div>
-					<div class="button"><a class="button__link" href="quejas.jsp">Ingresar una queja</a></div>
-					<div class="button"><a class="button__link" href="#">Generar un informe</a></div>
-					<div class="button"><a class="button__link" href="usuario?tipo=cerrarSesion">Cerrar sesión</a></div>
+					<div class="button"><a class="button__link button__link-text" href="principal.jsp">Inicio</a></div>
+					<div class="button"><a class="button__link button__link--quejas button__link-text" href="quejas.jsp">Ingresar una queja</a></div>
+					<div class="button"><a class="button__link button__link--informe button__link-text" href="#">Generar un informe</a></div>
+					<div class="button"><a class="button__link button__link--logout button__link-text" href="usuario?tipo=cerrarSesion">Cerrar sesión</a></div>
 				</div>
 			</div>
 		</div>
