@@ -98,7 +98,7 @@ body {
 
 
 /* iPhone 4 and iPhone 5/SE support */
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 320px) {
 	.container {
 		padding: 0;
 	}
@@ -118,7 +118,7 @@ body {
 }
 
 /* iPhone 6 support */
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 375px) {
 	.container {
 		padding: 0;
 	}
@@ -135,7 +135,7 @@ body {
 }
 
 /* iPhone 6/7/8 Plus support */
-@media screen and (max-width: 414px) {
+@media screen and (min-width: 414px) {
 	.container {
 		padding: 0;
 	}
@@ -151,7 +151,30 @@ body {
   	}
 }
 
+/* iPad Mini support */
+@media screen and (min-width: 768px) {
+	.menu_container__img {
+		height: 200px;
+  		width: 200px;
+  	}
+  	.button__link {
+  		padding: 20px 0;
+  	}
+  	.button__link-text {
+  		font-size: 1.5em;
+  	}
+}
 
-
-
-
+/* iPad support */
+@media screen and (min-width: 810px) {
+	.menu_container__img {
+		height: 200px;
+  		width: 200px;
+  	}
+  	.button__link {
+  		padding: 20px 0;
+  	}
+  	.button__link-text {
+  		font-size: 1.5em;
+  	}
+}
