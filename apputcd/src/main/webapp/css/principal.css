@@ -134,7 +134,22 @@ body {
   	}
 }
 
-
+/* iPhone 6/7/8 Plus support */
+@media screen and (max-width: 414px) {
+	.container {
+		padding: 0;
+	}
+	.menu_container__img {
+		height: 140px;
+  		width: 140px;
+  	}
+  	.button__link {
+  		padding: 15px 0;
+  	}
+  	.button__link-text {
+  		font-size: 1.3em;
+  	}
+}
 
 
 
