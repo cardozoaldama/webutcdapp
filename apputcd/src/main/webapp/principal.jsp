@@ -18,8 +18,7 @@
 	 --%>
 		<nav class="navbar navbar-dark bg-dark fixed-top">
 			<div class="container-fluid">
-				<a class="navbar-brand" href="#">Bienvenido
-					${sessionScope.usuario.nombre} al Sistema de Quejas de Alumbrado Público</a>
+				<a class="navbar-brand" href="#">Bienvenido <strong>${sessionScope.usuario.nombre}</strong> al Sistema de Quejas de Alumbrado Público</a>
 				<button class="navbar-toggler" type="button"
 					data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
 					aria-controls="offcanvasDarkNavbar">
@@ -50,6 +49,13 @@
 				</div>
 			</div>
 		</nav>
-		<div class="container"></div>
+		<div class="container">
+			<div class="menu_container">
+				<div class="button"><a class="button__link" href="principal.jsp">Inicio</a></div>
+				<div class="button"><a class="button__link" href="quejas.jsp">Ingresar una queja</a></div>
+				<div class="button"><a class="button__link" href="#">Generar un informe</a></div>
+				<div class="button"><a class="button__link" href="usuario?tipo=cerrarSesion">Cerrar sesión</a></div>
+			</div>
+		</div>
 	</body>
 </html>
