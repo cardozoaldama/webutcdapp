@@ -97,7 +97,25 @@ body {
 }
 
 
-
+/* iPhone 4 and iPhone 5/SE support */
+@media screen and (max-width: 320px) {
+	.container {
+		padding: 0;
+	}
+	.menu_container__img {
+		height: 90px;
+  		width: 90px;
+  	}
+  	.menu_container__title {
+  		display: none;
+  	}
+  	.button__link {
+  		padding: 5px 0;
+  	}
+  	.button__link-text {
+  		font-size: 1em;
+  	}
+}
 
 
 
