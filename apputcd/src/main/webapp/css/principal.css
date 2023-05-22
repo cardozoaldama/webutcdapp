@@ -4,6 +4,14 @@ body {
 	background-color: #ddd;
 }
 
+.flex-container {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	justify-content: center;
+}
+
 .container {
 	background-color: #eee;
 	margin-top: 57px;
@@ -20,5 +28,12 @@ body {
 .menu_container__img {
 	display: block;
 	height: 200px;
+	margin: 20px 0;
 	width: 200px;
+}
+
+.menu_container__title {
+	font-family: Arial, sans-serif;
+	font-size: 2em;
+	font-weight: 700;
 }
