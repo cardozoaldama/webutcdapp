@@ -21,10 +21,10 @@
 }
 
 .form_container {
-	align-content: left;
-	align-items: left;
+	align-content: flex-start;
+	align-items: flex-start;
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
-	justify-content: around;
+	justify-content: space-around;
 }
