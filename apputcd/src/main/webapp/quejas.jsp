@@ -70,15 +70,21 @@
 				</div>
 				<div class="label_container">
 					<label class="label_container__label">Departamento:</label>
-					<input type="text" class="label_container__text">
+					<select class="label_container__select">
+						<option class="label_container__option">Seleccionar una opción</option>
+					</select>
 				</div>
 				<div class="label_container">
 					<label class="label_container__label">Ciudad:</label>
-					<input type="text" class="label_container__text">
+					<select class="label_container__select">
+						<option class="label_container__option">Seleccionar una opción</option>
+					</select>
 				</div>
 				<div class="label_container">
 					<label class="label_container__label">Barrio:</label>
-					<input type="text" class="label_container__text">
+					<select class="label_container__select">
+						<option class="label_container__option">Seleccionar una opción</option>
+					</select>
 				</div>
 				<div class="label_container">
 					<label class="label_container__label">Dirección:</label>
