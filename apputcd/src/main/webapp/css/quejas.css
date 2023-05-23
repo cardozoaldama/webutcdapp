@@ -19,3 +19,12 @@
 .container_title {
 	margin-bottom: 20px;
 }
+
+.form_container {
+	align-content: left;
+	align-items: left;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: around;
+}
