@@ -86,7 +86,7 @@
 				</div>
 				<div class="label_container">
 					<label class="label_container__label">Correo electrónico:</label>
-					<input type="text" class="label_container__text" placeholder="Ej.: alejandro.perez@gmail.com">
+					<input type="email" id="label_container__email" class="label_container__email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Ej.: alejandro.perez@gmail.com">
 				</div>
 				<div class="label_container">
 					<label class="label_container__label">Referencias para llegar al lugar:</label>
