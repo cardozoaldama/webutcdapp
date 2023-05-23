@@ -18,7 +18,7 @@
 	 --%>
 		<nav class="navbar navbar-dark bg-dark fixed-top">
 			<div class="container-fluid">
-				<a class="navbar-brand" href="#">Bienvenido <strong>${sessionScope.usuario.nombre}</strong> al Sistema de Quejas de Alumbrado Público</a>
+				<a class="navbar-brand" href="principal.jsp">Bienvenido <strong>${sessionScope.usuario.nombre}</strong> al Sistema de Quejas de Alumbrado Público</a>
 				<button class="navbar-toggler" type="button"
 					data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
 					aria-controls="offcanvasDarkNavbar">
@@ -54,19 +54,19 @@
 			<div class="form_container">
 				<div class="label_container">
 					<label class="label_container__label">Nombre:</label>
-					<input type="text" class="label_container__text">
+					<input type="text" class="label_container__text" placeholder="Ej.: Alejandro Daniel">
 				</div>
 				<div class="label_container">
 					<label class="label_container__label">Apellido:</label>
-					<input type="text" class="label_container__text">
+					<input type="text" class="label_container__text" placeholder="Ej.: Pérez Suárez">
 				</div>
 				<div class="label_container">
 					<label class="label_container__label">Teléfono:</label>
-					<input type="text" class="label_container__text">
+					<input type="text" class="label_container__text" placeholder="Ej.: 0991456789">
 				</div>
 				<div class="label_container">
 					<label class="label_container__label">NIS:</label>
-					<input type="text" class="label_container__text">
+					<input type="text" class="label_container__text" placeholder="Ej.: 08241234">
 				</div>
 				<div class="label_container">
 					<label class="label_container__label">Departamento:</label>
@@ -82,15 +82,15 @@
 				</div>
 				<div class="label_container">
 					<label class="label_container__label">Dirección:</label>
-					<input type="text" class="label_container__text">
+					<input type="text" class="label_container__text" placeholder="Ej.: Calle San Isidoro, esquina tal...">
 				</div>
 				<div class="label_container">
 					<label class="label_container__label">Correo electrónico:</label>
-					<input type="text" class="label_container__text">
+					<input type="text" class="label_container__text" placeholder="Ej.: alejandro.perez@gmail.com">
 				</div>
 				<div class="label_container">
 					<label class="label_container__label">Referencias para llegar al lugar:</label>
-					<textarea class="label_container__textarea"></textarea>
+					<textarea class="label_container__textarea" placeholder="Intente detallar lo máximo posible. Coloque color de la casa, N° de la casa, algunas referencias para tener encuenta."></textarea>
 				</div>
 				<button class="button_send">Enviar formulario</button>
 			</div>
