@@ -54,15 +54,15 @@
 			<div class="form_container">
 				<div class="label_container">
 					<label class="label_container__label">Nombre:</label>
-					<input type="text" class="label_container__text" placeholder="Ej.: Alejandro Daniel">
+					<input type="text" class="label_container__text" placeholder="Ej.: Alejandro Daniel" required>
 				</div>
 				<div class="label_container">
 					<label class="label_container__label">Apellido:</label>
-					<input type="text" class="label_container__text" placeholder="Ej.: Pérez Suárez">
+					<input type="text" class="label_container__text" placeholder="Ej.: Pérez Suárez" required>
 				</div>
 				<div class="label_container">
 					<label class="label_container__label">Teléfono:</label>
-					<input type="text" class="label_container__text" placeholder="Ej.: 0991456789">
+					<input type="text" class="label_container__text" placeholder="Ej.: 0991456789" required>
 				</div>
 				<div class="label_container">
 					<label class="label_container__label">NIS:</label>
@@ -82,7 +82,7 @@
 				</div>
 				<div class="label_container">
 					<label class="label_container__label">Dirección:</label>
-					<input type="text" class="label_container__text" placeholder="Ej.: Calle San Isidoro, esquina tal...">
+					<input type="text" class="label_container__text" placeholder="Ej.: Calle San Isidoro, esquina tal..." required>
 				</div>
 				<div class="label_container">
 					<label class="label_container__label">Correo electrónico:</label>
@@ -90,7 +90,7 @@
 				</div>
 				<div class="label_container">
 					<label class="label_container__label">Referencias para llegar al lugar:</label>
-					<textarea class="label_container__textarea" placeholder="Intente detallar lo máximo posible. Coloque color de la casa, N° de la casa, algunas referencias para tener encuenta."></textarea>
+					<textarea class="label_container__textarea" placeholder="Intente detallar lo máximo posible. Coloque color de la casa, N° de la casa, algunas referencias para tener encuenta." required></textarea>
 				</div>
 				<button class="button_send">Enviar formulario</button>
 			</div>
