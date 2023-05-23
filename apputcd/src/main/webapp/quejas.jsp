@@ -10,6 +10,8 @@
 		<link rel="stylesheet" type="text/css" href="./css/quejas.css">
 		<script src="js/bootstrap.min.js"></script>
 		<link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
+		<!-- Font Awesome -->
+		<script src="https://kit.fontawesome.com/08f7b10637.js" crossorigin="anonymous"></script>
 		<title>Quejas de alumbrado público</title>
 	</head>
 	<body>
