@@ -52,6 +52,7 @@
 			</div>
 		</nav>
 		<div class="container">
+			<img class="container_img" src="./img/android-chrome-512x512.png" alt="Logotipo de la empresa" />
 			<h1 class="container_title">Ingresar una queja</h1>
 			<div class="form_container">
 				<div class="label_container">
