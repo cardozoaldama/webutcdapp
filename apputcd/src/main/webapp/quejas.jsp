@@ -56,50 +56,50 @@
 			<h1 class="container_title"><i class="fa-solid fa-pen fa-xs"></i> Ingresar una queja</h1>
 			<div class="form_container">
 				<div class="label_container">
-					<label class="label_container__label"><i class="fa-solid fa-user"></i> Nombre:</label>
-					<input type="text" class="label_container__text" placeholder="Ej.: Alejandro Daniel" required>
+					<label for="nombre" class="label_container__label"><i class="fa-solid fa-user"></i> Nombre:</label>
+					<input type="text" id="nombre" class="label_container__text" placeholder="Ej.: Alejandro Daniel" required>
 				</div>
 				<div class="label_container">
 					<label class="label_container__label"><i class="fa-solid fa-user"></i> Apellido:</label>
-					<input type="text" class="label_container__text" placeholder="Ej.: Pérez Suárez" required>
+					<input type="text" id="apellido" class="label_container__text" placeholder="Ej.: Pérez Suárez" required>
 				</div>
 				<div class="label_container">
-					<label class="label_container__label"><i class="fa-solid fa-square-phone"></i> Teléfono:</label>
-					<input type="text" class="label_container__text" placeholder="Ej.: 0991456789" required>
+					<label for="telefono" class="label_container__label"><i class="fa-solid fa-square-phone"></i> Teléfono:</label>
+					<input type="text" id="telefono" class="label_container__text" placeholder="Ej.: 0991456789" required>
 				</div>
 				<div class="label_container">
-					<label class="label_container__label"><i class="fa-solid fa-pager"></i> NIS:</label>
-					<input type="text" class="label_container__text" placeholder="Ej.: 08241234">
+					<label for="numeroNIS" class="label_container__label"><i class="fa-solid fa-pager"></i> NIS:</label>
+					<input type="text" id="numeroNIS" class="label_container__text" placeholder="Ej.: 08241234">
 				</div>
 				<div class="label_container">
-					<label class="label_container__label"><i class="fa-solid fa-map-location-dot"></i> Departamento:</label>
-					<select class="label_container__select">
+					<label for="departamento" class="label_container__label"><i class="fa-solid fa-map-location-dot"></i> Departamento:</label>
+					<select id="departamento" class="label_container__select">
 						<option class="label_container__option">Seleccionar una opción</option>
 					</select>
 				</div>
 				<div class="label_container">
-					<label class="label_container__label"><i class="fa-solid fa-map-location-dot"></i> Ciudad:</label>
-					<select class="label_container__select">
+					<label for="ciudad" class="label_container__label"><i class="fa-solid fa-map-location-dot"></i> Ciudad:</label>
+					<select id="ciudad" class="label_container__select">
 						<option class="label_container__option">Seleccionar una opción</option>
 					</select>
 				</div>
 				<div class="label_container">
-					<label class="label_container__label"><i class="fa-solid fa-map-location-dot"></i> Barrio:</label>
-					<select class="label_container__select">
+					<label for="barrio" class="label_container__label"><i class="fa-solid fa-map-location-dot"></i> Barrio:</label>
+					<select id="barrio" class="label_container__select">
 						<option class="label_container__option">Seleccionar una opción</option>
 					</select>
 				</div>
 				<div class="label_container">
-					<label class="label_container__label"><i class="fa-solid fa-location-dot"></i> Dirección:</label>
-					<input type="text" class="label_container__text" placeholder="Ej.: Calle San Isidoro, esquina tal..." required>
+					<label for="direccion" class="label_container__label"><i class="fa-solid fa-location-dot"></i> Dirección:</label>
+					<input type="text" id="direccion" class="label_container__text" placeholder="Ej.: Calle San Isidoro, esquina tal..." required>
 				</div>
 				<div class="label_container">
-					<label class="label_container__label"><i class="fa-solid fa-envelope"></i> Correo electrónico:</label>
+					<label for="label_container__email" class="label_container__label"><i class="fa-solid fa-envelope"></i> Correo electrónico:</label>
 					<input type="email" id="label_container__email" class="label_container__email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Ej.: alejandro.perez@gmail.com">
 				</div>
 				<div class="label_container">
-					<label class="label_container__label"><i class="fa-solid fa-map"></i> Referencias para llegar al lugar:</label>
-					<textarea class="label_container__textarea" placeholder="Intente detallar lo máximo posible. Coloque color de la casa, N° de la casa, algunas referencias para tener encuenta." required></textarea>
+					<label for="referencia" class="label_container__label"><i class="fa-solid fa-map"></i> Referencias para llegar al lugar:</label>
+					<textarea id="referencia" class="label_container__textarea" placeholder="Intente detallar lo máximo posible. Coloque color de la casa, N° de la casa, algunas referencias para tener encuenta." required></textarea>
 				</div>
 				<button class="button_send">Enviar formulario <i class="fa-solid fa-paper-plane"></i></button>
 			</div>
