@@ -99,6 +99,9 @@ body {
 
 /* iPhone 4 and iPhone 5/SE support */
 @media screen and (min-width: 320px) {
+	.navbar-brand {
+		display: none;
+	}
 	.container {
 		padding: 0;
 	}
@@ -111,6 +114,7 @@ body {
   	}
   	.button__link {
   		padding: 5px 0;
+  		width: 300px;
   	}
   	.button__link-text {
   		font-size: 1em;
