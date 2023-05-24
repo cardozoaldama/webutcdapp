@@ -60,7 +60,7 @@
 					<input type="text" id="nombre" class="label_container__text" placeholder="Ej.: Alejandro Daniel" required>
 				</div>
 				<div class="label_container">
-					<label class="label_container__label"><i class="fa-solid fa-user"></i> Apellido:</label>
+					<label for="apellido" class="label_container__label"><i class="fa-solid fa-user"></i> Apellido:</label>
 					<input type="text" id="apellido" class="label_container__text" placeholder="Ej.: Pérez Suárez" required>
 				</div>
 				<div class="label_container">
