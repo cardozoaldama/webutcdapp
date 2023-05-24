@@ -46,3 +46,8 @@
 .label_container__select {
 	cursor: pointer;
 }
+
+.label_container__textarea {
+	height: 80px;
+	resize: none;
+}
