@@ -39,11 +39,11 @@
 	width: 100%;
 }
 
-.label_container__input {
+.label_container__input, .label_container__email {
 	padding: 5px;
-	width: 100%;
 }
 
 .label_container__select {
 	cursor: pointer;
+	padding: 5px;
 }
