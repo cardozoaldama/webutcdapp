@@ -39,11 +39,10 @@
 	width: 100%;
 }
 
-.label_container__input, .label_container__email {
+.label_container__input, .label_container__email, .label_container__select {
 	padding: 5px;
 }
 
 .label_container__select {
 	cursor: pointer;
-	padding: 5px;
 }
