@@ -57,19 +57,19 @@
 			<div class="form_container">
 				<div class="label_container">
 					<label for="nombre" class="label_container__label"><i class="fa-solid fa-user"></i> Nombre:</label>
-					<input type="text" id="nombre" class="label_container__text" placeholder="Ej.: Alejandro Daniel" required>
+					<input type="text" id="nombre" class="label_container__input" placeholder="Ej.: Alejandro Daniel" required>
 				</div>
 				<div class="label_container">
 					<label for="apellido" class="label_container__label"><i class="fa-solid fa-user"></i> Apellido:</label>
-					<input type="text" id="apellido" class="label_container__text" placeholder="Ej.: Pérez Suárez" required>
+					<input type="text" id="apellido" class="label_container__input" placeholder="Ej.: Pérez Suárez" required>
 				</div>
 				<div class="label_container">
 					<label for="telefono" class="label_container__label"><i class="fa-solid fa-square-phone"></i> Teléfono:</label>
-					<input type="text" id="telefono" class="label_container__text" placeholder="Ej.: 0991456789" required>
+					<input type="text" id="telefono" class="label_container__input" placeholder="Ej.: 0991456789" required>
 				</div>
 				<div class="label_container">
 					<label for="numeroNIS" class="label_container__label"><i class="fa-solid fa-pager"></i> NIS:</label>
-					<input type="text" id="numeroNIS" class="label_container__text" placeholder="Ej.: 08241234">
+					<input type="text" id="numeroNIS" class="label_container__input" placeholder="Ej.: 08241234">
 				</div>
 				<div class="label_container">
 					<label for="departamento" class="label_container__label"><i class="fa-solid fa-map-location-dot"></i> Departamento:</label>
@@ -91,7 +91,7 @@
 				</div>
 				<div class="label_container">
 					<label for="direccion" class="label_container__label"><i class="fa-solid fa-location-dot"></i> Dirección:</label>
-					<input type="text" id="direccion" class="label_container__text" placeholder="Ej.: Calle San Isidoro, esquina tal..." required>
+					<input type="text" id="direccion" class="label_container__input" placeholder="Ej.: Calle San Isidoro, esquina tal..." required>
 				</div>
 				<div class="label_container">
 					<label for="label_container__email" class="label_container__label"><i class="fa-solid fa-envelope"></i> Correo electrónico:</label>
