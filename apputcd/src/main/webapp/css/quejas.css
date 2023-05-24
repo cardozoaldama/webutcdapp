@@ -85,3 +85,17 @@
 		width: auto;
 	}
 }
+
+/* iPad support */
+@media screen and (min-width: 800px) {
+	.container {
+		gap: 0;
+	}
+	.container_img, .container_title {
+		display: block;
+	}
+	.container_img {
+		height: 25%;
+		width: 25%;
+	}
+}
