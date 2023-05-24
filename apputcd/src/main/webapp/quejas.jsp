@@ -74,19 +74,19 @@
 				<div class="label_container">
 					<label for="departamento" class="label_container__label"><i class="fa-solid fa-map-location-dot"></i> Departamento:</label>
 					<select id="departamento" class="label_container__select">
-						<option class="label_container__option">Seleccionar una opción</option>
+						<option class="label_container__option" value="" selected>Seleccionar una opción</option>
 					</select>
 				</div>
 				<div class="label_container">
 					<label for="ciudad" class="label_container__label"><i class="fa-solid fa-map-location-dot"></i> Ciudad:</label>
 					<select id="ciudad" class="label_container__select">
-						<option class="label_container__option">Seleccionar una opción</option>
+						<option class="label_container__option" value="" selected>Seleccionar una opción</option>
 					</select>
 				</div>
 				<div class="label_container">
 					<label for="barrio" class="label_container__label"><i class="fa-solid fa-map-location-dot"></i> Barrio:</label>
 					<select id="barrio" class="label_container__select">
-						<option class="label_container__option">Seleccionar una opción</option>
+						<option class="label_container__option" value="" selected>Seleccionar una opción</option>
 					</select>
 				</div>
 				<div class="label_container">
