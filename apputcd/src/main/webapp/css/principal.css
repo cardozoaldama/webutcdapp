@@ -163,6 +163,9 @@ body {
 
 /* iPad Mini support */
 @media screen and (min-width: 768px) {
+	.navbar-brand {
+		display: block;
+	}
 	.menu_container__img {
 		height: 200px;
   		width: 200px;
