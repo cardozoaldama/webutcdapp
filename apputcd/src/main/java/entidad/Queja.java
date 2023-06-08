@@ -64,5 +64,34 @@ public class Queja {
 	}
 	
 	// SETTERS
-	
+	public void setIdReclamo(int id_reclamo) {
+		this.id_reclamo = id_reclamo;
 	}
+	public void setNumeroReclamo(String numero_reclamo) {
+		this.numero_reclamo = numero_reclamo;
+	}
+	public void setNis(int nis) {
+		this.nis = nis;
+	}
+	public void setTelefono(String telefono) {
+		this.telefono = telefono;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	public void setApellido(String apellido) {
+		this.apellido = apellido;
+	}
+	public void setDireccion(String direccion) {
+		this.direccion = direccion;
+	}
+	public void setNumeroMovil(String numero_movil) {
+		this.numero_movil = numero_movil;
+	}
+	public void setCorreo(String correo) {
+		this.correo = correo;
+	}
+	public void setObservacion(String observacion) {
+		this.observacion = observacion;
+	}
+}
