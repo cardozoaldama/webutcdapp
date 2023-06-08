@@ -32,7 +32,7 @@ public class Queja {
 	}
 	
 	// Getters y Setters
-	public int getId_reclamo() {
+	public int getIdReclamo() {
 		return id_reclamo;
 	}
 	public String getNumeroReclamo() {
@@ -62,4 +62,7 @@ public class Queja {
 	public String getObservacion() {
 		return observacion;
 	}
-}
+	
+	// SETTERS
+	
+	}
