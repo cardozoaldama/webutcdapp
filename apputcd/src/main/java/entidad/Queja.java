@@ -56,6 +56,9 @@ public class Queja {
 	public String getNumeroMovil() {
 		return numero_movil;
 	}
+	public String getReferencia() {
+		return referencia;
+	}
 	public String getCorreo() {
 		return correo;
 	}
