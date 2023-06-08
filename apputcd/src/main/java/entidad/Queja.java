@@ -31,7 +31,7 @@ public class Queja {
 		this.observacion = observacion;
 	}
 	
-	// Getters y Setters
+	// GETTERS
 	public int getIdReclamo() {
 		return id_reclamo;
 	}
@@ -84,6 +84,9 @@ public class Queja {
 	}
 	public void setDireccion(String direccion) {
 		this.direccion = direccion;
+	}
+	public void setReferencia(String referencia) {
+		this.referencia = referencia;
 	}
 	public void setNumeroMovil(String numero_movil) {
 		this.numero_movil = numero_movil;
