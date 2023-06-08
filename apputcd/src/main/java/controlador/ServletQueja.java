@@ -39,40 +39,44 @@ public class ServletQueja extends HttpServlet {
 		System.out.println("Hello Servlet into ServletQueja.java!");
 		String action = request.getParameter("action");
 		System.out.println(action);
-		switch(action) {
-		case "index":
-			index(request, response);
-			break;
-		case "nuevo":
-			nuevo(request, response);
-			break;
-		case "register":
-			System.out.println("Entrando... Registrando...");
-			registrar(request, response);
-			break;
-		case "mostrar":
-			mostrar(request,response);
-			break;
-		case "showedit":
-			showEditar(request, response);
-			break;
-		case "editar":
-			editar(request, response);
-			break;
-		case "eliminar":
-			eliminar(request, response);
-			break;
-		case "example":
-			ejemplo(request, response);
-			break;
-		case "registrarQuejas":
-			registrarQuejas(request, response);
-			break;
-		case "comboDepartamento":
-			comboDepartamento(request, response);
-			break;
-		default:
-			break;
+		try {
+			switch(action) {
+			case "index":
+				index(request, response);
+				break;
+			case "nuevo":
+				nuevo(request, response);
+				break;
+			case "register":
+				System.out.println("Entrando... Registrando...");
+				registrar(request, response);
+				break;
+			case "mostrar":
+				mostrar(request,response);
+				break;
+			case "showedit":
+				showEditar(request, response);
+				break;
+			case "editar":
+				editar(request, response);
+				break;
+			case "eliminar":
+				eliminar(request, response);
+				break;
+			case "example":
+				ejemplo(request, response);
+				break;
+			case "registrarQuejas":
+				registrarQuejas(request, response);
+				break;
+			case "comboDepartamento":
+				comboDepartamento(request, response);
+				break;
+			default:
+				break;
+			}
+		} catch (SQLException e) {
+			e.getStackTrace();
 		}
 	}
 	private void comboDepartamento(HttpServletRequest request, HttpServletResponse response) {
@@ -111,8 +115,7 @@ public class ServletQueja extends HttpServlet {
 		// TODO Auto-generated method stub
 		
 	}
-	private void index(HttpServletRequest request, HttpServletResponse response) {
-		// TODO Auto-generated method stub
+	private void index(HttpServletRequest request, HttpServletResponse response) throws SQLException, ServletException, IOException {
 		
 	}
 	
