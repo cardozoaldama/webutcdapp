@@ -65,8 +65,8 @@ public class ServletQueja extends HttpServlet {
 		case "example":
 			ejemplo(request, response);
 			break;
-		case "registrarArticulos":
-			registrarArticulos(request, response);
+		case "registrarQuejas":
+			registrarQuejas(request, response);
 			break;
 		case "comboDepartamento":
 			comboDepartamento(request, response);
@@ -79,7 +79,7 @@ public class ServletQueja extends HttpServlet {
 		// TODO Auto-generated method stub
 		
 	}
-	private void registrarArticulos(HttpServletRequest request, HttpServletResponse response) {
+	private void registrarQuejas(HttpServletRequest request, HttpServletResponse response) {
 		// TODO Auto-generated method stub
 		
 	}
