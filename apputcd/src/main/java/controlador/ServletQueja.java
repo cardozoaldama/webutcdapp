@@ -116,7 +116,8 @@ public class ServletQueja extends HttpServlet {
 		
 	}
 	private void index(HttpServletRequest request, HttpServletResponse response) throws SQLException, ServletException, IOException {
-		
+		RequestDispatcher dispatcher = request.getRequestDispatcher("principal.jsp");
+		dispatcher.forward(request, response);
 	}
 	
 	/*
