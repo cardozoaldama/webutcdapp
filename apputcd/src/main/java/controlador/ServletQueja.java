@@ -103,17 +103,19 @@ public class ServletQueja extends HttpServlet {
 		// TODO Auto-generated method stub
 		
 	}
-	private void mostrar(HttpServletRequest request, HttpServletResponse response) {
-		// TODO Auto-generated method stub
-		
+	private void mostrar(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException , ServletException{
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/vista/mostrar.jsp");
+		List<Queja> listaArticulos= quejaDAO.listarQuejas();
+		request.setAttribute("lista", listaArticulos);
+		dispatcher.forward(request, response);
 	}
 	private void registrar(HttpServletRequest request, HttpServletResponse response) {
 		// TODO Auto-generated method stub
 		
 	}
-	private void nuevo(HttpServletRequest request, HttpServletResponse response) {
-		// TODO Auto-generated method stub
-		
+	private void nuevo(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException {
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/vista/register.jsp");
+		dispatcher.forward(request, response);
 	}
 	private void index(HttpServletRequest request, HttpServletResponse response) throws SQLException, ServletException, IOException {
 		RequestDispatcher dispatcher = request.getRequestDispatcher("principal.jsp");
