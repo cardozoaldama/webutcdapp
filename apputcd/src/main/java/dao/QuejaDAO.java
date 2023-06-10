@@ -28,6 +28,11 @@ public class QuejaDAO {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	public void actualizar(Queja queja) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 
 }

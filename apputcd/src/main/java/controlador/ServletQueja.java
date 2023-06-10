@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import dao.QuejaDAO;
+import entidad.Articulo;
 import entidad.Queja;
 
 // TODO: Agregar lo mismo que hay en ServletArticulo.java
@@ -93,10 +94,35 @@ public class ServletQueja extends HttpServlet {
 	private void registrar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException {
 		Queja queja = new Queja(0, request.getParameter("numero_reclamo"), Integer.parseInt(request.getParameter("nis")), request.getParameter("telefono"), request.getParameter("nombre"), request.getParameter("apellido"), request.getParameter("direccion"), request.getParameter("referencia"), request.getParameter("numero_movil"), request.getParameter("correo"), request.getParameter("observacion"));
 		quejaDAO.insertar(queja, request);
-		request.setAttribute("mensaje", "Los datos se insertaron correctamente");
-		RequestDispatcher dispatcher = request.getRequestDispatcher("./quejas.jsp");
+		request.setAttribute("mensaje", "Los datos se insertaron correctamente en el ServletQueja.java");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("./vista/quejas.jsp");
 		dispatcher.forward(request, response);
 	}
+	
+	private void nuevo(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException {
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/vista/register.jsp");
+		dispatcher.forward(request, response);
+	}
+	
+	private void mostrar(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException , ServletException{
+		RequestDispatcher dispatcher = request.getRequestDispatcher("./vista/mostrar.jsp");
+		List<Queja> listaQuejas = quejaDAO.listarQuejas();
+		request.setAttribute("lista", listaQuejas);
+		dispatcher.forward(request, response);
+	}
+	
+	private void showEditar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException {
+		Queja queja = quejaDAO.obtenerPorId(Integer.parseInt(request.getParameter(request.getParameter("id_reclamo"))));
+		request.setAttribute("queja", queja);
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/vista/editar_articulos.jsp");
+		dispatcher.forward(request, response);
+	}
+	private void editar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException  {
+		Queja queja = new Queja(Integer.parseInt(request.getParameter("id_reclamo")), request.getParameter("numero_reclamo"), Integer.parseInt(request.getParameter("nis")), request.getParameter("telefono"), request.getParameter("nombre"), request.getParameter("apellido"), request.getParameter("direccion"), request.getParameter("referencia"), request.getParameter("numero_movil"), request.getParameter("correo"), request.getParameter("observacion"));
+		quejaDAO.actualizar(queja);
+		index(request, response);
+	}
+	
 	private void comboDepartamento(HttpServletRequest request, HttpServletResponse response) {
 		// TODO Auto-generated method stub
 		
@@ -113,27 +139,7 @@ public class ServletQueja extends HttpServlet {
 		// TODO Auto-generated method stub
 		
 	}
-	private void editar(HttpServletRequest request, HttpServletResponse response) {
-		// TODO Auto-generated method stub
 		
-	}
-	private void showEditar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException {
-		Queja queja = quejaDAO.obtenerPorId(Integer.parseInt(request.getParameter(request.getParameter("id_reclamo"))));
-		request.setAttribute("queja", queja);
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/vista/editar.jsp");
-		dispatcher.forward(request, response);
-	}
-	private void mostrar(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException , ServletException{
-		RequestDispatcher dispatcher = request.getRequestDispatcher("./mostrar.jsp");
-		List<Queja> listaQuejas = quejaDAO.listarQuejas();
-		request.setAttribute("lista", listaQuejas);
-		dispatcher.forward(request, response);
-	}
-	private void nuevo(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException {
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/vista/register.jsp");
-		dispatcher.forward(request, response);
-	}
-	
 	/*
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("Hello doPost from ServletQueja.java");
