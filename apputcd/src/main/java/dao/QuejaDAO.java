@@ -13,6 +13,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import javax.servlet.http.HttpServletRequest;
 
 import conexion.Conexion;
+import entidad.Articulo;
 import entidad.Queja;
 
 // TODO: Agregar los mismo que hay en ArticuloDAO.java
@@ -116,9 +117,23 @@ public class QuejaDAO {
 	    return 0;
 	}
 
-	public Queja obtenerPorId(int parseInt) {
-		// TODO Auto-generated method stub
-		return null;
+	// OBTENER POR ID:
+	public Queja obtenerPorId(int id_reclamo) throws SQLException {
+		Queja queja = null;
+		String sql = "SELECT * FROM sys_reclamo WHERE id_reclamo=?";
+		con.conectar();
+		connection = con.getJdbcConnection();
+		PreparedStatement statement = connection.prepareStatement(sql);
+		statement.setInt(1, id_reclamo);
+		ResultSet res = statement.executeQuery();
+		
+		if (res.next()) {
+			queja = new Queja(res.getInt("id_reclamo"), res.getString("numero_reclamo"), res.getInt("nis"), res.getString("telefono"), res.getString("nombre"), res.getString("apellido"), res.getString("direccion"), res.getString("referencia"), res.getString("numero_movil"), res.getString("correo"), res.getString("observacion"));
+		}
+		res.close();
+		con.desconectar();
+
+		return queja;
 	}
 
 	public void actualizar(Queja queja) {
