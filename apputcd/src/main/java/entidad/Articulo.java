@@ -1,23 +1,6 @@
 package entidad;
 
 public class Articulo {
-	
-	// NUESTRO CÓDIGO
-	private int id_reclamo;
-	private String numero_reclamo;
-	private int nis;
-	private String telefono;
-	private String nombre_;
-	private String apellido;
-	private String direccion;
-	private String referencia;
-	private String numero_movil;
-	private String correo;
-	private String observacion;
-	private String departamento;
-	private String ciudad;
-	private String barrio;
-	
 	private int idarticulo;
 	private String codigo;
 	private String nombre;
@@ -45,6 +28,7 @@ public class Articulo {
 		 
 	}
 	
+	// TODO: Agregar este código parecido para Queja.java	
 	public void ArticuloReg(String codigo, String nombre, String descripcion, double existencia, double precio) {
 		this.codigo = codigo;
 		this.nombre = nombre;
