@@ -48,6 +48,17 @@ public class QuejaDAO {
 		int ultimoIdReclamo = obtenerUltimoIdReclamo();
 		contadorid.set(ultimoIdReclamo + 1);
 		
+		statement.setInt(1, contadorid.get());
+		statement.setString(2, queja.getNumeroReclamo());
+		statement.setInt(3, queja.getNis());
+		statement.setString(4, queja.getTelefono());
+		statement.setString(5, queja.getNombre());
+		statement.setString(6, queja.getApellido());
+		statement.setString(7, queja.getDireccion());
+		statement.setString(8, queja.getNumeroMovil());
+		statement.setString(9, queja.getReferencia());
+		statement.setString(10, queja.getCorreo());
+		statement.setString(11, queja.getObservacion());
 	}
 
 	public List<Queja> listarQuejas() {
