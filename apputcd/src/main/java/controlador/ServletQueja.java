@@ -100,9 +100,11 @@ public class ServletQueja extends HttpServlet {
 		// TODO Auto-generated method stub
 		
 	}
-	private void showEditar(HttpServletRequest request, HttpServletResponse response) {
-		// TODO Auto-generated method stub
-		
+	private void showEditar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException {
+		Queja queja = quejaDAO.obtenerPorId(Integer.parseInt(request.getParameter(request.getParameter("id_reclamo"))));
+		request.setAttribute("queja", queja);
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/vista/editar.jsp");
+		dispatcher.forward(request, response);
 	}
 	private void mostrar(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException , ServletException{
 		RequestDispatcher dispatcher = request.getRequestDispatcher("./mostrar.jsp");

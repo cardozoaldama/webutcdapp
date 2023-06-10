@@ -21,6 +21,11 @@ public class QuejaDAO {
 		// TODO Auto-generated method stub
 		
 	}
+
+	public Queja obtenerPorId(int parseInt) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 
 }
