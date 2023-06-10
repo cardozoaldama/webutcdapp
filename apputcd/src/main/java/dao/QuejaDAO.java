@@ -6,6 +6,8 @@ import javax.servlet.http.HttpServletRequest;
 
 import entidad.Queja;
 
+// TODO: Agregar los mismo que hay en ArticuloDAO.java
+
 public class QuejaDAO {
 
 	public QuejaDAO(String jbdcURL, String jbdcUsername, String jbdcPassword) {
