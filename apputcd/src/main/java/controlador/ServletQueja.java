@@ -128,6 +128,14 @@ public class ServletQueja extends HttpServlet {
 		RequestDispatcher dispatcher = request.getRequestDispatcher("principal.jsp");
 		dispatcher.forward(request, response);		
 	}
+	
+	private void ejemplo(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException {
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/vista/example.jsp");
+		List<Queja> listaQuejas= quejaDAO.listarQuejas();
+		request.setAttribute("lista", listaQuejas);
+		dispatcher.forward(request, response);
+		
+	}
 	private void comboDepartamento(HttpServletRequest request, HttpServletResponse response) {
 		// TODO Auto-generated method stub
 		
@@ -136,10 +144,7 @@ public class ServletQueja extends HttpServlet {
 		// TODO Auto-generated method stub
 		
 	}
-	private void ejemplo(HttpServletRequest request, HttpServletResponse response) {
-		// TODO Auto-generated method stub
-		
-	}
+	
 	
 	/*
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
