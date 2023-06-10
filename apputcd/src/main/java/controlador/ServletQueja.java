@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import dao.QuejaDAO;
 import entidad.Queja;
 
+@WebServlet("/queja")
 public class ServletQueja extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	QuejaDAO quejaDAO;
@@ -110,10 +111,10 @@ public class ServletQueja extends HttpServlet {
 		dispatcher.forward(request, response);
 	}
 	private void registrar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException {
-		Queja articulo = new Queja(0, request.getParameter("id_reclamo"), request.getParameter("numero_reclamo"), request.getParameter("nis"), request.getParameter("telefono"), request.getParameter("nombre"), request.getParameter("apellido"), request.getParameter("direccion"), request.getParameter("referencia"), request.getParameter("numero_movil"), request.getParameter("correo"), request.getParameter("observacion"));
-		quejaDAO.insertar(articulo, request);
+		Queja queja = new Queja(0, request.getParameter("id_reclamo"), request.getParameter("numero_reclamo"), request.getParameter("nis"), request.getParameter("telefono"), request.getParameter("nombre"), request.getParameter("apellido"), request.getParameter("direccion"), request.getParameter("referencia"), request.getParameter("numero_movil"), request.getParameter("correo"), request.getParameter("observacion"));
+		quejaDAO.insertar(queja, request);
 		request.setAttribute("mensaje", "Los datos se insertaron correctamente");
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/vista/registrar_articulos.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("./quejas.jsp");
         dispatcher.forward(request, response);
 		
 	}
