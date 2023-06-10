@@ -159,6 +159,7 @@ public class QuejaDAO {
 		return rowActualizar;	
 	}
 
+	// Por ahora hace la eliminación y no inactivación
 	public boolean actualizarInactivar(Queja queja, HttpServletRequest request) throws SQLException {
 		boolean rowInactivar = false;
 		String sql = "DELETE FROM sys_reclamo WHERE id_reclamo=?";;
