@@ -33,6 +33,11 @@ public class QuejaDAO {
 		// TODO Auto-generated method stub
 		
 	}
+
+	public void actualizarInactivar(Queja queja, HttpServletRequest request) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 
 }

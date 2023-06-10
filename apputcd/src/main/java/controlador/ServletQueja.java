@@ -122,7 +122,12 @@ public class ServletQueja extends HttpServlet {
 		quejaDAO.actualizar(queja);
 		index(request, response);
 	}
-	
+	private void eliminar(HttpServletRequest request, HttpServletResponse response) throws SQLException, ServletException, IOException {
+		Queja queja = quejaDAO.obtenerPorId(Integer.parseInt(request.getParameter("id_reclamo")));
+		quejaDAO.actualizarInactivar(queja, request);
+		RequestDispatcher dispatcher = request.getRequestDispatcher("principal.jsp");
+		dispatcher.forward(request, response);		
+	}
 	private void comboDepartamento(HttpServletRequest request, HttpServletResponse response) {
 		// TODO Auto-generated method stub
 		
@@ -135,11 +140,7 @@ public class ServletQueja extends HttpServlet {
 		// TODO Auto-generated method stub
 		
 	}
-	private void eliminar(HttpServletRequest request, HttpServletResponse response) {
-		// TODO Auto-generated method stub
-		
-	}
-		
+	
 	/*
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("Hello doPost from ServletQueja.java");
