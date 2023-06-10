@@ -19,7 +19,7 @@
 	Bienvenido ${sessionScope.usuario.nombre}
  --%>	
  		<!-- Cabecera de menú -->
-		<%@ include file="header.jsp"%>
+		<%@ include file="./vista/header.jsp"%>
 		<div class="flex-container">
 			<div class="container">
 				<div class="menu_container">
