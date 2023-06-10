@@ -174,6 +174,20 @@ public class QuejaDAO {
 
 		return rowInactivar;
 	}
-	
+	// ELIMINAR RECLAMOS
+		public boolean eliminar(Queja queja) throws SQLException {
+			boolean rowEliminar = false;
+			String sql = "DELETE FROM sys_reclamo WHERE id_reclamo=?";
+			con.conectar();
+			connection = con.getJdbcConnection();
+			PreparedStatement statement = connection.prepareStatement(sql);
+			//statement.setInt(1, articulo.getIdarticulo());
+			statement.setInt(1, queja.getIdReclamo());
+			rowEliminar = statement.executeUpdate() > 0;
+			statement.close();
+			con.desconectar();
+			return rowEliminar;
+		}
+		
 
 }
