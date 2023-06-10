@@ -39,7 +39,7 @@ public class QuejaDAO {
 	
 	// PROCEDIMIENTO DE INSERCIÓN	
 	public void insertar(Queja queja, HttpServletRequest request) throws SQLException {
-		String sql = "INSERT INTO sys_reclamo (id_reclamo, numero_reclamo, nis, telefono, apellido, direccion, referencia, numero_movil, correo, observacion, fecha_hora_recepcion, asignacion_usuario, id_departamento, id_ciudad, id_barrio, id_cuenta) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+		String sql = "INSERT INTO sys_reclamo (id_reclamo, numero_reclamo, nis, telefono, nombre, apellido, direccion, referencia, numero_movil, correo, observacion, fecha_hora_recepcion, asignacion_usuario, id_departamento, id_ciudad, id_barrio, id_cuenta) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 		con.conectar();
 		connection = con.getJdbcConnection();
 		PreparedStatement statement = connection.prepareStatement(sql);
@@ -55,10 +55,18 @@ public class QuejaDAO {
 		statement.setString(5, queja.getNombre());
 		statement.setString(6, queja.getApellido());
 		statement.setString(7, queja.getDireccion());
-		statement.setString(8, queja.getNumeroMovil());
-		statement.setString(9, queja.getReferencia());
+		statement.setString(8, queja.getReferencia());
+		statement.setString(9, queja.getNumeroMovil());
 		statement.setString(10, queja.getCorreo());
 		statement.setString(11, queja.getObservacion());
+		
+		// Añadir fecha y hora:
+	    statement.setTimestamp(12, timestamp);
+		
+		// Para obtener e insertar el usuario de sesión.
+	    String usuarioCreacion = request.getParameter("nombre");
+	    statement.setString(13, usuarioCreacion);
+	    
 	}
 
 	public List<Queja> listarQuejas() {
