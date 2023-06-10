@@ -2,7 +2,9 @@ package dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.sql.Timestamp;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -41,11 +43,29 @@ public class QuejaDAO {
 		con.conectar();
 		connection = con.getJdbcConnection();
 		PreparedStatement statement = connection.prepareStatement(sql);
+		
+		// CONTADOR PARA INSERTAR EL ID
+		int ultimoIdReclamo = obtenerUltimoIdReclamo();
+		contadorid.set(ultimoIdReclamo + 1);
+		
 	}
 
 	public List<Queja> listarQuejas() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	// Este método está relacionado con el contador para insertar el ID.
+	private int obtenerUltimoIdReclamo() throws SQLException {
+		String sql = "SELECT MAX(id_reclamo) FROM sys_reclamo";
+	    try (Statement statement = connection.createStatement();
+	         ResultSet resultSet = statement.executeQuery(sql)) {
+	        if (resultSet.next()) {
+	            return resultSet.getInt(1);
+	        }
+	    }
+	    // Si no hay registros en la tabla, retorna un valor predeterminado
+	    return 0;
 	}
 
 	public Queja obtenerPorId(int parseInt) {
