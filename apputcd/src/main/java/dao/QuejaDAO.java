@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -74,9 +75,32 @@ public class QuejaDAO {
 		return rowInserted;
 	}
 
-	public List<Queja> listarQuejas() {
-		// TODO Auto-generated method stub
-		return null;
+	// LISTAR TODOS LAS QUEJAS
+	public List<Queja> listarQuejas() throws SQLException  {
+		List<Queja> listaQuejas = new ArrayList<Queja>();
+		String sql = "SELECT * FROM sys_reclamo";
+		con.conectar();
+		connection = con.getJdbcConnection();
+		Statement statement = connection.createStatement();
+		ResultSet resulSet = statement.executeQuery(sql);
+		
+		while (resulSet.next()) {
+			int id_reclamo= resulSet.getInt("id_reclamo");
+			String numero_reclamo = resulSet.getString("numero_reclamo");
+			int nis = resulSet.getInt("nis");
+			String telefono = resulSet.getString("telefono");
+			String nombre = resulSet.getString("nombre");
+			String apellido = resulSet.getString("apellido");
+			String direccion = resulSet.getString("direccion");
+			String referencia = resulSet.getString("referencia");
+			String numero_movil = resulSet.getString("numero_movil");
+			String correo = resulSet.getString("correo");
+			String observacion = resulSet.getString("observacion");
+			Queja queja = new Queja(id_reclamo, numero_reclamo, nis, telefono, nombre, apellido, direccion, referencia, numero_movil, correo, observacion);
+			listaQuejas.add(queja);
+		}
+		con.desconectar();
+		return listaQuejas;
 	}
 
 	// Este método está relacionado con el contador para insertar el ID.
