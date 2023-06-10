@@ -159,9 +159,19 @@ public class QuejaDAO {
 		return rowActualizar;	
 	}
 
-	public void actualizarInactivar(Queja queja, HttpServletRequest request) {
-		// TODO Auto-generated method stub
-		
+	public boolean actualizarInactivar(Queja queja, HttpServletRequest request) throws SQLException {
+		boolean rowInactivar = false;
+		String sql = "DELETE FROM sys_reclamo WHERE id_reclamo=?";;
+		con.conectar();
+		connection = con.getJdbcConnection();
+		PreparedStatement statement = connection.prepareStatement(sql);
+		statement.setInt(1, queja.getIdReclamo());
+
+		rowInactivar = statement.executeUpdate() > 0;
+		statement.close();
+		con.desconectar();
+
+		return rowInactivar;
 	}
 	
 
