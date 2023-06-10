@@ -32,6 +32,20 @@ public class Queja {
 		this.correo = correo;
 		this.observacion = observacion;
 	}
+	
+	// No sabemos en dónde lo llaman.
+	public void QuejaReg(String numero_reclamo, int nis, String telefono, String nombre, String apellido, String direccion, String referencia, String numero_movil, String correo, String observacion) {
+		this.numero_reclamo = numero_reclamo;
+		this.nis = nis;
+		this.telefono = telefono;
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.direccion = direccion;
+		this.referencia = referencia;
+		this.numero_movil = numero_movil;
+		this.correo = correo;
+		this.observacion = observacion;
+	}
 
 	// GETTERS
 	public int getIdReclamo() {
