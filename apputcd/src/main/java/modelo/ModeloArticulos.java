@@ -29,7 +29,7 @@ public class ModeloArticulos {
 		this.existencia = existencia;
 		this.precio = precio;
 	}
-
+	
 	public int getIdarticulo() {
 		return idarticulo;
 	}
