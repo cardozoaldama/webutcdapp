@@ -172,9 +172,8 @@ public class ServletArticulo extends HttpServlet {
 		dispatcher.forward(request, response);
 	}
 
-	private void registrarArticulos(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException, SQLException {
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/vista/registrar_articulos.jsp");
+	private void registrarArticulos(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException {
+		RequestDispatcher dispatcher = request.getRequestDispatcher("./vista/quejas.jsp");
 		dispatcher.forward(request, response);
 	}
 
