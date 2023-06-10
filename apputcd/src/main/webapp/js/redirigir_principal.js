@@ -3,5 +3,5 @@
  */
 
 function redirigirPrincipal() {
-    window.location.href = "../principal.jsp";
+    window.location.href = "principal.jsp";
 }
