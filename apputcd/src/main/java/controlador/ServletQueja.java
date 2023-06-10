@@ -134,18 +134,18 @@ public class ServletQueja extends HttpServlet {
 		List<Queja> listaQuejas= quejaDAO.listarQuejas();
 		request.setAttribute("lista", listaQuejas);
 		dispatcher.forward(request, response);
-		
+	}
+	
+	// Se ha cambiado totalmente del original ServletArticulo.java
+	private void registrarQuejas(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException {
+		RequestDispatcher dispatcher = request.getRequestDispatcher("./vista/quejas.jsp");
+		dispatcher.forward(request, response);
 	}
 	private void comboDepartamento(HttpServletRequest request, HttpServletResponse response) {
 		// TODO Auto-generated method stub
 		
 	}
-	private void registrarQuejas(HttpServletRequest request, HttpServletResponse response) {
-		// TODO Auto-generated method stub
 		
-	}
-	
-	
 	/*
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("Hello doPost from ServletQueja.java");
