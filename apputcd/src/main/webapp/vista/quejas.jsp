@@ -25,7 +25,7 @@
 			<img class="container_img" src="./img/android-chrome-512x512.png" alt="Logotipo de la empresa" />
 			<h1 class="container_title"><i class="fa-solid fa-pen fa-xs"></i> Ingresar una queja</h1>
 			<div class="form_container">
-				<form action="articulo?action=register" method="post">
+				<form action="queja?action=register" method="post">
 					<div class="label_container">
 						<label for="nombre" class="label_container__label"><i class="fa-solid fa-user"></i> Nombre:</label>
 						<input type="text" id="nombre" class="label_container__input" placeholder="Ej.: Alejandro Daniel" required>

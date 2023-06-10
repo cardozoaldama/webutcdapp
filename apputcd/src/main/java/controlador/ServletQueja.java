@@ -95,7 +95,7 @@ public class ServletQueja extends HttpServlet {
 		Queja queja = new Queja(0, request.getParameter("numero_reclamo"), Integer.parseInt(request.getParameter("nis")), request.getParameter("telefono"), request.getParameter("nombre"), request.getParameter("apellido"), request.getParameter("direccion"), request.getParameter("referencia"), request.getParameter("numero_movil"), request.getParameter("correo"), request.getParameter("observacion"));
 		quejaDAO.insertar(queja, request);
 		request.setAttribute("mensaje", "Los datos se insertaron correctamente en el ServletQueja.java");
-		RequestDispatcher dispatcher = request.getRequestDispatcher("./vista/quejas.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/vista/quejas.jsp");
 		dispatcher.forward(request, response);
 	}
 	

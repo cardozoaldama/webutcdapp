@@ -31,7 +31,7 @@
 					<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
 						<li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Inicio</a></li>
 						<li class="nav-item"><a class="nav-link active" aria-current="page" href="articulo?action=example">Mostrar Articulos</a></li>
-						<li class="nav-item"><a class="nav-link active" aria-current="page" href="articulo?action=registrarArticulos">Registrar Articulo</a></li>
+						<li class="nav-item"><a class="nav-link active" aria-current="page" href="queja?action=registrarQuejas">Ingresar una queja</a></li>
 						<li class="nav-item"><a class="nav-link active" aria-current="page" href="articulo?action=comboDatos">Datos Combos</a></li>
 						<li class="nav-item"><a class="nav-link active" aria-current="page" href="usuario?tipo=cerrarSesion">Cerrar Sesion</a></li>					
 					</ul>
