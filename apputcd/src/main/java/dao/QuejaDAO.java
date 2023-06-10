@@ -38,7 +38,7 @@ public class QuejaDAO {
 	Timestamp timestamp = new Timestamp(datetime);
 	
 	// PROCEDIMIENTO DE INSERCIÓN	
-	public void insertar(Queja queja, HttpServletRequest request) throws SQLException {
+	public boolean insertar(Queja queja, HttpServletRequest request) throws SQLException {
 		String sql = "INSERT INTO sys_reclamo (id_reclamo, numero_reclamo, nis, telefono, nombre, apellido, direccion, referencia, numero_movil, correo, observacion, fecha_hora_recepcion, asignacion_usuario, id_departamento, id_ciudad, id_barrio, id_cuenta) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 		con.conectar();
 		connection = con.getJdbcConnection();
@@ -60,13 +60,18 @@ public class QuejaDAO {
 		statement.setString(10, queja.getCorreo());
 		statement.setString(11, queja.getObservacion());
 		
-		// Añadir fecha y hora:
+		// Añadir fecha y hora para la recepción de ese reclamo:
 	    statement.setTimestamp(12, timestamp);
 		
 		// Para obtener e insertar el usuario de sesión.
 	    String usuarioCreacion = request.getParameter("nombre");
 	    statement.setString(13, usuarioCreacion);
 	    
+	    boolean rowInserted = statement.executeUpdate() > 0;
+		System.out.println("Articulo registrado");
+		statement.close();
+		con.desconectar();
+		return rowInserted;
 	}
 
 	public List<Queja> listarQuejas() {
