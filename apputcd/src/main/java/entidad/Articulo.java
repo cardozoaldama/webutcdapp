@@ -1,6 +1,22 @@
 package entidad;
 
-public class Articulo {	
+public class Articulo {
+	
+	// NUESTRO CÓDIGO
+	private int id_reclamo;
+	private String numero_reclamo;
+	private int nis;
+	private String telefono;
+	private String nombre_;
+	private String apellido;
+	private String direccion;
+	private String referencia;
+	private String numero_movil;
+	private String correo;
+	private String observacion;
+	private String departamento;
+	private String ciudad;
+	private String barrio;
 	
 	private int idarticulo;
 	private String codigo;
