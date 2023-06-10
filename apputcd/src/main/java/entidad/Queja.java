@@ -4,6 +4,8 @@ package entidad;
  * Con esta clase permitirá la obtención de datos para el archivo quejas.jsp
  * */
 
+// Esta clase Queja también conecta con ServletQueja.java
+
 public class Queja {
 	private int id_reclamo;
 	private String numero_reclamo;
@@ -29,12 +31,6 @@ public class Queja {
 		this.numero_movil = numero_movil;
 		this.correo = correo;
 		this.observacion = observacion;
-	}
-	
-	public Queja(int i, String parameter, String parameter2, String parameter3, String parameter4, String parameter5,
-			String parameter6, String parameter7, String parameter8, String parameter9, String parameter10,
-			String parameter11) {
-		// TODO Agregar código lo mismo como en Articulo.java
 	}
 
 	// GETTERS

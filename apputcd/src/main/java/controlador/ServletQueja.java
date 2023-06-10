@@ -86,7 +86,17 @@ public class ServletQueja extends HttpServlet {
 		System.out.println("Hola ServletQueja.java ...");
 		doGet(request, response);
 	}
-	
+	private void index(HttpServletRequest request, HttpServletResponse response) throws SQLException, ServletException, IOException {
+		RequestDispatcher dispatcher = request.getRequestDispatcher("principal.jsp");
+		dispatcher.forward(request, response);
+	}
+	private void registrar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException {
+		Queja queja = new Queja(0, request.getParameter("numero_reclamo"), Integer.parseInt(request.getParameter("nis")), request.getParameter("telefono"), request.getParameter("nombre"), request.getParameter("apellido"), request.getParameter("direccion"), request.getParameter("referencia"), request.getParameter("numero_movil"), request.getParameter("correo"), request.getParameter("observacion"));
+		quejaDAO.insertar(queja, request);
+		request.setAttribute("mensaje", "Los datos se insertaron correctamente");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("./quejas.jsp");
+		dispatcher.forward(request, response);
+	}
 	private void comboDepartamento(HttpServletRequest request, HttpServletResponse response) {
 		// TODO Auto-generated method stub
 		
@@ -119,20 +129,8 @@ public class ServletQueja extends HttpServlet {
 		request.setAttribute("lista", listaQuejas);
 		dispatcher.forward(request, response);
 	}
-	private void registrar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException {
-		Queja queja = new Queja(0, request.getParameter("id_reclamo"), request.getParameter("numero_reclamo"), request.getParameter("nis"), request.getParameter("telefono"), request.getParameter("nombre"), request.getParameter("apellido"), request.getParameter("direccion"), request.getParameter("referencia"), request.getParameter("numero_movil"), request.getParameter("correo"), request.getParameter("observacion"));
-		quejaDAO.insertar(queja, request);
-		request.setAttribute("mensaje", "Los datos se insertaron correctamente");
-        RequestDispatcher dispatcher = request.getRequestDispatcher("./quejas.jsp");
-        dispatcher.forward(request, response);
-		
-	}
 	private void nuevo(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException {
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/vista/register.jsp");
-		dispatcher.forward(request, response);
-	}
-	private void index(HttpServletRequest request, HttpServletResponse response) throws SQLException, ServletException, IOException {
-		RequestDispatcher dispatcher = request.getRequestDispatcher("principal.jsp");
 		dispatcher.forward(request, response);
 	}
 	
