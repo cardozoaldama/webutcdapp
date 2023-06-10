@@ -136,9 +136,27 @@ public class QuejaDAO {
 		return queja;
 	}
 
-	public void actualizar(Queja queja) {
-		// TODO Auto-generated method stub
+	public boolean actualizar(Queja queja) throws SQLException {
+		boolean rowActualizar = false;
+		String sql = "UPDATE sys_reclamo SET numero_reclamo=?,nis=?,telefono=?,nombre=?,apellido=?,direccion=?,referencia=?,numero_movil=?,correo=?,observacion=? WHERE id_reclamo=?";
+		con.conectar();
+		connection = con.getJdbcConnection();
+		PreparedStatement statement = connection.prepareStatement(sql);
+		statement.setString(1, queja.getNumeroReclamo());
+		statement.setInt(2, queja.getNis());
+		statement.setString(3, queja.getTelefono());
+		statement.setString(4, queja.getNombre());
+		statement.setString(5, queja.getApellido());
+		statement.setString(6, queja.getDireccion());
+		statement.setString(7, queja.getReferencia());
+		statement.setString(8, queja.getNumeroMovil());
+		statement.setString(9, queja.getCorreo());
+		statement.setString(10, queja.getObservacion());
 		
+		rowActualizar = statement.executeUpdate() > 0;
+		statement.close();
+		con.desconectar();
+		return rowActualizar;	
 	}
 
 	public void actualizarInactivar(Queja queja, HttpServletRequest request) {
