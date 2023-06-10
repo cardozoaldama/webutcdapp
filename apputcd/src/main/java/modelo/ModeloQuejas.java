@@ -45,5 +45,75 @@ public class ModeloQuejas {
 	
 	// GETTERS
 	
+	public int getIdReclamo() {
+		return id_reclamo;
+	}
+	
+	public String getNumeroReclamo() {
+		return numero_reclamo;
+	}
+	
+	public int getNis() {
+		return nis;
+	}
+	public String getTelefono() {
+		return telefono;
+	}
+	public String getNombre() {
+		return nombre;
+	}
+	public String getApellido() {
+		return apellido;
+	}
+	public String getDireccion() {
+		return direccion;
+	}
+	public String getNumeroMovil() {
+		return numero_movil;
+	}
+	public String getReferencia() {
+		return referencia;
+	}
+	public String getCorreo() {
+		return correo;
+	}
+	public String getObservacion() {
+		return observacion;
+	}
+	
 	// SETTERS
+	
+	public void setIdReclamo(int id_reclamo) {
+		this.id_reclamo = id_reclamo;
+	}
+	public void setNumeroReclamo(String numero_reclamo) {
+		this.numero_reclamo = numero_reclamo;
+	}
+	public void setNis(int nis) {
+		this.nis = nis;
+	}
+	public void setTelefono(String telefono) {
+		this.telefono = telefono;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	public void setApellido(String apellido) {
+		this.apellido = apellido;
+	}
+	public void setDireccion(String direccion) {
+		this.direccion = direccion;
+	}
+	public void setReferencia(String referencia) {
+		this.referencia = referencia;
+	}
+	public void setNumeroMovil(String numero_movil) {
+		this.numero_movil = numero_movil;
+	}
+	public void setCorreo(String correo) {
+		this.correo = correo;
+	}
+	public void setObservacion(String observacion) {
+		this.observacion = observacion;
+	}
 }
