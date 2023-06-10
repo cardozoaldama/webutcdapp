@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import dao.QuejaDAO;
 import entidad.Queja;
 
+// TODO: Agregar lo mismo que hay en ServletArticulo.java
 @WebServlet("/queja")
 public class ServletQueja extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -80,6 +81,12 @@ public class ServletQueja extends HttpServlet {
 			e.getStackTrace();
 		}
 	}
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)	throws ServletException, IOException {
+		System.out.println("Hola ServletQueja.java ...");
+		doGet(request, response);
+	}
+	
 	private void comboDepartamento(HttpServletRequest request, HttpServletResponse response) {
 		// TODO Auto-generated method stub
 		
