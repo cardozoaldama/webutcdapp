@@ -105,9 +105,9 @@ public class ServletQueja extends HttpServlet {
 		
 	}
 	private void mostrar(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException , ServletException{
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/vista/mostrar.jsp");
-		List<Queja> listaArticulos= quejaDAO.listarQuejas();
-		request.setAttribute("lista", listaArticulos);
+		RequestDispatcher dispatcher = request.getRequestDispatcher("./mostrar.jsp");
+		List<Queja> listaQuejas = quejaDAO.listarQuejas();
+		request.setAttribute("lista", listaQuejas);
 		dispatcher.forward(request, response);
 	}
 	private void registrar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException {
