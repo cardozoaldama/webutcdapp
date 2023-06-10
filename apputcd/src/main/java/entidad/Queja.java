@@ -34,7 +34,7 @@ public class Queja {
 	public Queja(int i, String parameter, String parameter2, String parameter3, String parameter4, String parameter5,
 			String parameter6, String parameter7, String parameter8, String parameter9, String parameter10,
 			String parameter11) {
-		// TODO Auto-generated constructor stub
+		// TODO Agregar código lo mismo como en Articulo.java
 	}
 
 	// GETTERS
