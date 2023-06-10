@@ -2,6 +2,8 @@ package dao;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import entidad.Queja;
 
 public class QuejaDAO {
@@ -13,6 +15,11 @@ public class QuejaDAO {
 	public List<Queja> listarQuejas() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	public void insertar(Queja articulo, HttpServletRequest request) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 

@@ -31,6 +31,12 @@ public class Queja {
 		this.observacion = observacion;
 	}
 	
+	public Queja(int i, String parameter, String parameter2, String parameter3, String parameter4, String parameter5,
+			String parameter6, String parameter7, String parameter8, String parameter9, String parameter10,
+			String parameter11) {
+		// TODO Auto-generated constructor stub
+	}
+
 	// GETTERS
 	public int getIdReclamo() {
 		return id_reclamo;
