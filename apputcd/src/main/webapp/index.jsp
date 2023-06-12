@@ -29,8 +29,8 @@
 			<form id="formLogin" action="usuario" method="post">
 				<input type="hidden" name="tipo" value="iniciarSesion" />
 				<div class="form-group">
-					<label for="usuario"><i class="fa-solid fa-user fa-xs"></i> Usuario</label>
-					<input type="text" id="usuario" class="form-control" name="nombre" placeholder="Nombre de usuario" />
+					<label for="nombre"><i class="fa-solid fa-user fa-xs"></i> Usuario</label>
+					<input type="text" id="nombre" class="form-control" name="nombre" placeholder="Nombre de usuario" />
 				</div>
 
 				<div class="form-group">
