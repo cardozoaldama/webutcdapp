@@ -15,7 +15,7 @@
 </head>
 <body>
 	<div class="container">
-		<div class="container_img"><img src="./img/android-chrome-512x512.png" alt="Logotipo de la empresa"></div>
+		<div class="container_img"><img src="./img/clean.png" alt="Logotipo de la empresa"></div>
 		<c:set var="mensaje" value="${requestScope.mensaje}" />
 		<c:if test="${not empty mensaje}">
 			<div id="alertLogin"
