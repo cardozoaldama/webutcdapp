@@ -18,8 +18,12 @@ public class Queja {
 	private String numero_movil;
 	private String correo;
 	private String observacion;
+	// Nuevas cosas
+	private String departamento;
+	private String ciudad;
+	private String barrio;
 	
-	public Queja(int id_reclamo, String numero_reclamo, int nis, String telefono, String nombre, String apellido, String direccion, String referencia, String numero_movil, String correo, String observacion) {
+	public Queja(int id_reclamo, String numero_reclamo, int nis, String telefono, String nombre, String apellido, String direccion, String referencia, String numero_movil, String correo, String observacion, String departamento, String ciudad, String barrio) {
 		this.id_reclamo = id_reclamo;
 		this.numero_reclamo = numero_reclamo;
 		this.nis = nis;
@@ -31,10 +35,13 @@ public class Queja {
 		this.numero_movil = numero_movil;
 		this.correo = correo;
 		this.observacion = observacion;
+		this.departamento = departamento;
+		this.ciudad = ciudad;
+		this.barrio = barrio;
 	}
 	
 	// No sabemos en dónde lo llaman.
-	public void QuejaReg(String numero_reclamo, int nis, String telefono, String nombre, String apellido, String direccion, String referencia, String numero_movil, String correo, String observacion) {
+	public void QuejaReg(String numero_reclamo, int nis, String telefono, String nombre, String apellido, String direccion, String referencia, String numero_movil, String correo, String observacion, String departamento, String ciudad, String barrio) {
 		this.numero_reclamo = numero_reclamo;
 		this.nis = nis;
 		this.telefono = telefono;
@@ -45,6 +52,9 @@ public class Queja {
 		this.numero_movil = numero_movil;
 		this.correo = correo;
 		this.observacion = observacion;
+		this.departamento = departamento;
+		this.ciudad = ciudad;
+		this.barrio = barrio;
 	}
 
 	// GETTERS
@@ -82,6 +92,19 @@ public class Queja {
 		return observacion;
 	}
 	
+	// Nuevos Getters
+	public String getDepartamento() {
+		return departamento;
+	}
+	
+	public String getCiudad() {
+		return ciudad;
+	}
+	
+	public String getBarrio() { 
+		return barrio;
+	}
+	
 	// SETTERS
 	public void setIdReclamo(int id_reclamo) {
 		this.id_reclamo = id_reclamo;
@@ -115,5 +138,18 @@ public class Queja {
 	}
 	public void setObservacion(String observacion) {
 		this.observacion = observacion;
+	}
+	
+	// Nuevos Setters
+	public String setDepartamento(String departamento) {
+		return this.departamento;
+	}
+	
+	public String setCiudad(String ciudad) {
+		return this.ciudad;
+	}
+	
+	public String setBarrio(String barrio) { 
+		return this.barrio;
 	}
 }
