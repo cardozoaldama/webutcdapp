@@ -22,7 +22,7 @@
 		<%@ include file="header.jsp" %>
 		<%-- Container stuff --%>
 		<div class="container">
-			<img class="container_img" src="./img/android-chrome-512x512.png" alt="Logotipo de la empresa" />
+			<img class="container_img" src="./img/clean.png" alt="Logotipo de la empresa" />
 			<h1 class="container_title"><i class="fa-solid fa-pen fa-xs"></i> Ingresar una queja</h1>
 			<div class="form_container">
 				<form action="queja?action=register" method="post">
@@ -44,21 +44,15 @@
 					</div>
 					<div class="label_container">
 						<label for="departamento" class="label_container__label"><i class="fa-solid fa-map-location-dot"></i> Departamento:</label>
-						<select id="departamento" class="label_container__select">
-							<option class="label_container__option" value="" selected>Seleccionar una opción</option>
-						</select>
+						<input type="text" id="departamento" class="label_container__input" placeholder="Ingrese departamento">
 					</div>
 					<div class="label_container">
 						<label for="ciudad" class="label_container__label"><i class="fa-solid fa-map-location-dot"></i> Ciudad:</label>
-						<select id="ciudad" class="label_container__select">
-							<option class="label_container__option" value="" selected>Seleccionar una opción</option>
-						</select>
+						<input type="text" id="ciudad" class="label_container__input" placeholder="Ingrese ciudad">
 					</div>
 					<div class="label_container">
 						<label for="barrio" class="label_container__label"><i class="fa-solid fa-map-location-dot"></i> Barrio:</label>
-						<select id="barrio" class="label_container__select">
-							<option class="label_container__option" value="" selected>Seleccionar una opción</option>
-						</select>
+						<input type="text" id="barrio" class="label_container__input" placeholder="Ingrese barrio">
 					</div>
 					<div class="label_container">
 						<label for="direccion" class="label_container__label"><i class="fa-solid fa-location-dot"></i> Dirección:</label>
