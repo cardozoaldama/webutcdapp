@@ -92,7 +92,8 @@ public class ServletQueja extends HttpServlet {
 		dispatcher.forward(request, response);
 	}
 	private void registrar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException {
-		Queja queja = new Queja(0, request.getParameter("numero_reclamo"), Integer.parseInt(request.getParameter("nis")), request.getParameter("telefono"), request.getParameter("nombre"), request.getParameter("apellido"), request.getParameter("direccion"), request.getParameter("referencia"), request.getParameter("numero_movil"), request.getParameter("correo"), request.getParameter("observacion"));
+		// Queja queja = new Queja(0, request.getParameter("numero_reclamo"), Integer.parseInt(request.getParameter("nis")), request.getParameter("telefono"), request.getParameter("nombre"), request.getParameter("apellido"), request.getParameter("direccion"), request.getParameter("referencia"), request.getParameter("numero_movil"), request.getParameter("correo"), request.getParameter("observacion"), request.getParameter("departamento"), request.getParameter("ciudad"), request.getParameter("barrio"));
+		Queja queja = new Queja(0, Integer.parseInt(request.getParameter("nis")), request.getParameter("telefono"), request.getParameter("nombre"), request.getParameter("apellido"), request.getParameter("direccion"), request.getParameter("referencia"), request.getParameter("correo"), request.getParameter("departamento"), request.getParameter("ciudad"), request.getParameter("barrio"));
 		quejaDAO.insertar(queja, request);
 		request.setAttribute("mensaje", "Los datos se insertaron correctamente en el ServletQueja.java");
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/vista/quejas.jsp");
@@ -118,7 +119,8 @@ public class ServletQueja extends HttpServlet {
 		dispatcher.forward(request, response);
 	}
 	private void editar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException  {
-		Queja queja = new Queja(Integer.parseInt(request.getParameter("id_reclamo")), request.getParameter("numero_reclamo"), Integer.parseInt(request.getParameter("nis")), request.getParameter("telefono"), request.getParameter("nombre"), request.getParameter("apellido"), request.getParameter("direccion"), request.getParameter("referencia"), request.getParameter("numero_movil"), request.getParameter("correo"), request.getParameter("observacion"));
+		// Queja queja = new Queja(request.getParameter("id_reclamo"), request.getParameter("numero_reclamo"), Integer.parseInt(request.getParameter("nis")), request.getParameter("telefono"), request.getParameter("nombre"), request.getParameter("apellido"), request.getParameter("direccion"), request.getParameter("referencia"), request.getParameter("numero_movil"), request.getParameter("correo"), request.getParameter("observacion"), request.getParameter("departamento"), request.getParameter("ciudad"), request.getParameter("barrio"));
+		Queja queja = new Queja(Integer.parseInt(request.getParameter("id_reclamo")), Integer.parseInt(request.getParameter("nis")), request.getParameter("telefono"), request.getParameter("nombre"), request.getParameter("apellido"), request.getParameter("direccion"), request.getParameter("referencia"), request.getParameter("correo"), request.getParameter("departamento"), request.getParameter("ciudad"), request.getParameter("barrio"));
 		quejaDAO.actualizar(queja);
 		index(request, response);
 	}
