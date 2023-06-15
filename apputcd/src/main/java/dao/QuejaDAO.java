@@ -54,18 +54,18 @@ public class QuejaDAO {
 		statement.setString(3, queja.getApellido());
 		statement.setString(4, queja.getTelefono());
 		// statement.setInt(5, queja.getNis());
-		statement.setString(6, queja.getDepartamento());
-		statement.setString(7, queja.getCiudad());
-		statement.setString(8, queja.getBarrio());
-		statement.setString(9, queja.getDireccion());
-		statement.setString(10, queja.getCorreo());
-		statement.setString(11, queja.getReferencia());
+		statement.setString(5, queja.getDepartamento());
+		statement.setString(6, queja.getCiudad());
+		statement.setString(7, queja.getBarrio());
+		statement.setString(8, queja.getDireccion());
+		statement.setString(9, queja.getCorreo());
+		statement.setString(10, queja.getReferencia());
 		// statement.setString(2, queja.getNumeroReclamo());
 		// statement.setString(9, queja.getNumeroMovil());
 		// statement.setString(11, queja.getObservacion());
 		
 		// Añadir fecha y hora para la recepción de ese reclamo:
-	    statement.setTimestamp(12, timestamp);
+	    statement.setTimestamp(11, timestamp);
 	    
 	    // Agregar los departamentos, ciudades, y barrios
 		
@@ -74,7 +74,7 @@ public class QuejaDAO {
 	    statement.setString(13, usuarioCreacion);*/
 	    
 	    boolean rowInserted = statement.executeUpdate() > 0;
-		System.out.println("Articulo registrado");
+		System.out.println("Articulo registrado into QuejaDAO");
 		statement.close();
 		con.desconectar();
 		return rowInserted;
