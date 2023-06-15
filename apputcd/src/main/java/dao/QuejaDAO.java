@@ -182,7 +182,8 @@ public class QuejaDAO {
 		statement.setString(7, queja.getDepartamento());
 		statement.setString(8, queja.getCiudad());
 		statement.setString(9, queja.getBarrio());
-		statement.setInt(10, queja.getIdReclamo());
+		// statement.setInt(10, queja.getIdReclamo());
+		statement.setInt(10, queja.getIdreclamo());
 		rowActualizar = statement.executeUpdate() > 0;
 		statement.close();
 		con.desconectar();
@@ -196,7 +197,7 @@ public class QuejaDAO {
 		con.conectar();
 		connection = con.getJdbcConnection();
 		PreparedStatement statement = connection.prepareStatement(sql);
-		statement.setInt(1, queja.getIdReclamo());
+		statement.setInt(1, queja.getIdreclamo());
 
 		rowInactivar = statement.executeUpdate() > 0;
 		statement.close();
@@ -213,7 +214,7 @@ public class QuejaDAO {
 		connection = con.getJdbcConnection();
 		PreparedStatement statement = connection.prepareStatement(sql);
 		// statement.setInt(1, articulo.getIdarticulo());
-		statement.setInt(1, queja.getIdReclamo());
+		statement.setInt(1, queja.getIdreclamo());
 		rowEliminar = statement.executeUpdate() > 0;
 		statement.close();
 		con.desconectar();
