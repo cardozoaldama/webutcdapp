@@ -85,7 +85,7 @@ public class QuejaDAO {
 
 	// LISTAR TODOS LAS QUEJAS
 	public List<Queja> listarQuejas() throws SQLException {
-		List<Queja> listaQuejas = new ArrayList<>();
+		List<Queja> listaQuejas = new ArrayList<Queja>();
 		String sql = "SELECT * FROM sys_reclamo_aux";
 		con.conectar();
 		connection = con.getJdbcConnection();
