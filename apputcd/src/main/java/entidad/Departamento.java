@@ -1,27 +1,26 @@
 package entidad;
 
-public class Departamento {	
+public class Departamento {
 	private Integer id_departamento;
 	private String nombre;
 	private String observacion;
-	
-	public Departamento(int id_departamento,String nombre, String observacion) {
+
+	public Departamento(int id_departamento, String nombre, String observacion) {
 		this.id_departamento = id_departamento;
 		this.nombre = nombre;
 		this.observacion = observacion;
 	}
-	//getters y setters
+	// getters y setters
 
 	public Departamento(Integer id) {
 		this.id_departamento = id;
 	}
-	
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result
-				+ ((id_departamento == null) ? 0 : id_departamento.hashCode());
+		result = prime * result + ((id_departamento == null) ? 0 : id_departamento.hashCode());
 		return result;
 	}
 
@@ -29,9 +28,7 @@ public class Departamento {
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
+		if ((obj == null) || (getClass() != obj.getClass()))
 			return false;
 		Departamento other = (Departamento) obj;
 		if (id_departamento == null) {
@@ -65,5 +62,5 @@ public class Departamento {
 	public void setObservacion(String observacion) {
 		this.observacion = observacion;
 	}
-	
+
 }

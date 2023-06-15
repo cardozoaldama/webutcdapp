@@ -19,18 +19,18 @@ import dao.DepartamentoDAO;
 import entidad.Ciudad;
 
 @WebServlet("/obtenerCiudades")
-public class ServletObtenerCiudades extends HttpServlet{
+public class ServletObtenerCiudades extends HttpServlet {
 
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
-	
+
 	ArticuloDAO articuloDAO;
 	DepartamentoDAO departamentoDAO;
 	CiudadDAO ciudadDAO;
 
-
+	@Override
 	public void init() {
 		String jdbcURL = getServletContext().getInitParameter("URL");
 		String jdbcUsername = getServletContext().getInitParameter("USUARIO");
@@ -50,13 +50,15 @@ public class ServletObtenerCiudades extends HttpServlet{
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String idDepartamentoParam = request.getParameter("idDepartamento");
-        int idDepartamento = Integer.parseInt(idDepartamentoParam);
 
-        // Obtener la lista de ciudades según el idDepartamento
-        List<Ciudad> listaCiudades = null;
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		String idDepartamentoParam = request.getParameter("idDepartamento");
+		int idDepartamento = Integer.parseInt(idDepartamentoParam);
+
+		// Obtener la lista de ciudades según el idDepartamento
+		List<Ciudad> listaCiudades = null;
 		try {
 			listaCiudades = articuloDAO.listarCiudadesPorDepartamento(idDepartamento);
 		} catch (SQLException e) {
@@ -64,12 +66,12 @@ public class ServletObtenerCiudades extends HttpServlet{
 			e.printStackTrace();
 		}
 
-        // Convertir la lista de ciudades a JSON y enviarla como respuesta
-        response.setContentType("application/json");
-        response.setCharacterEncoding("UTF-8");
-        PrintWriter out = response.getWriter();
-        out.write(new Gson().toJson(listaCiudades));
-        out.flush();
-    }
+		// Convertir la lista de ciudades a JSON y enviarla como respuesta
+		response.setContentType("application/json");
+		response.setCharacterEncoding("UTF-8");
+		PrintWriter out = response.getWriter();
+		out.write(new Gson().toJson(listaCiudades));
+		out.flush();
+	}
 
 }

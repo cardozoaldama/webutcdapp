@@ -1,13 +1,13 @@
 package entidad;
 
 public class Ciudad {
-	
+
 	private Integer id_ciudad;
 	private Integer id_departamento;
 	private String nombre;
 	private String observacion;
-	
-	public Ciudad(int id_ciudad,int id_departamento,String nombre, String observacion) {
+
+	public Ciudad(int id_ciudad, int id_departamento, String nombre, String observacion) {
 		this.id_ciudad = id_ciudad;
 		this.id_departamento = id_departamento;
 		this.nombre = nombre;
@@ -46,5 +46,4 @@ public class Ciudad {
 		this.observacion = observacion;
 	}
 
-	
 }

@@ -19,6 +19,7 @@ public class ServletDepartamento extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	DepartamentoDAO departamentoDAO;
 
+	@Override
 	public void init() {
 		String jdbcURL = getServletContext().getInitParameter("URL");
 		String jdbcUsername = getServletContext().getInitParameter("USUARIO");
@@ -43,6 +44,7 @@ public class ServletDepartamento extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
 	 *      response)
 	 */
+	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		System.out.println("Hola Servlet..");
@@ -55,38 +57,40 @@ public class ServletDepartamento extends HttpServlet {
 				break;
 			case "mostrar":
 				mostrar(request, response);
-				break;	
+				break;
 			default:
 				break;
-			}			
+			}
 		} catch (SQLException e) {
 			e.getStackTrace();
 		}
-		
-		
+
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
 	 *      response)
 	 */
+	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		System.out.println("Hola Servlet..");
 		doGet(request, response);
 	}
-	
-	private void index (HttpServletRequest request, HttpServletResponse response) throws SQLException, ServletException, IOException{
-		//mostrar(request, response);
-		RequestDispatcher dispatcher= request.getRequestDispatcher("principal.jsp");
+
+	private void index(HttpServletRequest request, HttpServletResponse response)
+			throws SQLException, ServletException, IOException {
+		// mostrar(request, response);
+		RequestDispatcher dispatcher = request.getRequestDispatcher("principal.jsp");
 		dispatcher.forward(request, response);
 	}
-	
-	private void mostrar(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException , ServletException{
+
+	private void mostrar(HttpServletRequest request, HttpServletResponse response)
+			throws SQLException, IOException, ServletException {
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/vista/combo_datos.jsp");
-		List<Departamento> listaArticulos= departamentoDAO.listarDepartamentos();
+		List<Departamento> listaArticulos = departamentoDAO.listarDepartamentos();
 		request.setAttribute("lista", listaArticulos);
 		dispatcher.forward(request, response);
-	}	
+	}
 
 }
