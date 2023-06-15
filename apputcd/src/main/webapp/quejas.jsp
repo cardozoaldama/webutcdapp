@@ -19,7 +19,7 @@
 		Bienvenido ${sessionScope.usuario.nombre}
 	 --%>
 		<!-- Incluir cabecera header.jsp -->
-		<%@ include file="header.jsp" %>
+		<%@ include file="/vista/header.jsp" %>
 		<%-- Container stuff --%>
 		<div class="container">
 			<img class="container_img" src="./img/android-chrome-512x512.png" alt="Logotipo de la empresa" />
