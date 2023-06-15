@@ -146,7 +146,7 @@ public class ServletQueja extends HttpServlet {
 			throws ServletException, IOException, SQLException {
 		Queja queja = quejaDAO.obtenerPorId(Integer.parseInt(request.getParameter("id")));
 		request.setAttribute("queja", queja);
-		RequestDispatcher dispatcher = request.getRequestDispatcher("./vista/editarQuejas.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/vista/editarQuejas.jsp");
 		dispatcher.forward(request, response);
 	}
 
@@ -163,6 +163,7 @@ public class ServletQueja extends HttpServlet {
 	private void eliminar(HttpServletRequest request, HttpServletResponse response)
 			throws SQLException, ServletException, IOException {
 		Queja queja = quejaDAO.obtenerPorId(Integer.parseInt(request.getParameter("id")));
+		System.out.println("id " + queja);
 		quejaDAO.actualizarInactivar(queja, request);
 		RequestDispatcher dispatcher = request.getRequestDispatcher("principal.jsp");
 		dispatcher.forward(request, response);
