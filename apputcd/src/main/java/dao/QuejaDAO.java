@@ -106,7 +106,7 @@ public class QuejaDAO {
 			// String observacion = resulSet.getString("observacion");
 			// Queja queja = new Queja(id_reclamo, numero_reclamo, nis, telefono, nombre, apellido, direccion, referencia, numero_movil, correo, observacion, departamento, ciudad, barrio);
 			// TODO: Take an eye with this:
-			Queja queja = new Queja(id_reclamo, apellido, telefono, nombre, departamento, ciudad, barrio, direccion, correo, referencia);
+			Queja queja = new Queja(id_reclamo, nombre, apellido, telefono, departamento, ciudad, barrio, direccion, correo, referencia);
 			listaQuejas.add(queja);
 		}
 		con.desconectar();
@@ -138,7 +138,7 @@ public class QuejaDAO {
 		
 		if (res.next()) {
 			// queja = new Queja(res.getInt("id_reclamo"), res.getString("numero_reclamo"), res.getInt("nis"), res.getString("telefono"), res.getString("nombre"), res.getString("apellido"), res.getString("direccion"), res.getString("referencia"), res.getString("numero_movil"), res.getString("correo"), res.getString("observacion"), res.getString("departamento"), res.getString("ciudad"), res.getString("barrio"));
-			queja = new Queja(res.getInt("id_reclamo"), res.getString("telefono"), res.getString("nombre"), res.getString("apellido"), res.getString("direccion"), res.getString("referencia"), res.getString("correo"), res.getString("departamento"), res.getString("ciudad"), res.getString("barrio"));
+			queja = new Queja(res.getInt("id_reclamo"), res.getString("nombre"), res.getString("apellido"), res.getString("telefono"), res.getString("departamento"), res.getString("ciudad"), res.getString("barrio"), res.getString("direccion"), res.getString("correo"), res.getString("referencia"));
 		}
 		res.close();
 		con.desconectar();
