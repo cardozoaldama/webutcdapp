@@ -3,7 +3,7 @@ package modelo;
 import java.util.concurrent.atomic.AtomicLong;
 
 public class ModeloQuejas {
-	private int id_reclamo;
+	private int idreclamo;
 	private String numero_reclamo;
 	// private int nis;
 	private String telefono;
@@ -16,9 +16,9 @@ public class ModeloQuejas {
 	private String observacion;
 	private static final AtomicLong contador = new AtomicLong(100);
 
-	public ModeloQuejas(int id_reclamo, String numero_reclamo, String telefono, String nombre, String apellido,
+	public ModeloQuejas(int idreclamo, String numero_reclamo, String telefono, String nombre, String apellido,
 			String direccion, String referencia, String numero_movil, String correo, String observacion) {
-		this.id_reclamo = id_reclamo;
+		this.idreclamo = idreclamo;
 		this.numero_reclamo = numero_reclamo;
 		// this.nis = nis;
 		this.telefono = telefono;
@@ -33,7 +33,7 @@ public class ModeloQuejas {
 
 	public ModeloQuejas(String numero_reclamo, String telefono, String nombre, String apellido, String direccion,
 			String referencia, String numero_movil, String correo, String observacion) {
-		this.id_reclamo = (int) contador.incrementAndGet();
+		this.idreclamo = (int) contador.incrementAndGet();
 		this.numero_reclamo = numero_reclamo;
 		// this.nis = nis;
 		this.telefono = telefono;
@@ -49,7 +49,7 @@ public class ModeloQuejas {
 	// GETTERS
 
 	public int getIdReclamo() {
-		return id_reclamo;
+		return idreclamo;
 	}
 
 	public String getNumeroReclamo() {
@@ -93,8 +93,8 @@ public class ModeloQuejas {
 
 	// SETTERS
 
-	public void setIdReclamo(int id_reclamo) {
-		this.id_reclamo = id_reclamo;
+	public void setIdReclamo(int idreclamo) {
+		this.idreclamo = idreclamo;
 	}
 
 	public void setNumeroReclamo(String numero_reclamo) {
