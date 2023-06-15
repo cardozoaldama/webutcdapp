@@ -66,8 +66,8 @@
 									<td><c:out value="${queja.direccion}"/></td>
 									<td><c:out value="${queja.correo}"/></td>
 									<td><c:out value="${queja.referencia}"/></td>
-									<td><a href="queja?action=showedit&id=<c:out value="${Queja.id_reclamo}" />">Editar</a></td>
-									<td><a href="queja?action=eliminar&id=<c:out value="${Queja.id_reclamo}"/>">Eliminar</a> </td>
+									<td><a href="queja?action=showedit&id=<c:out value="${queja.idreclamo}" />">Editar</a></td>
+									<td><a href="queja?action=eliminar&id=<c:out value="${queja.idreclamo}"/>">Eliminar</a> </td>
 									
 								</tr>
 							</c:forEach>
