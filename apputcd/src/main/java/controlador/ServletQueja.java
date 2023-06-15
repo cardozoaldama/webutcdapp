@@ -68,6 +68,9 @@ public class ServletQueja extends HttpServlet {
 			case "example":
 				ejemplo(request, response);
 				break;
+			case "mostrarQuejas":
+				mostrarQuejas(request, response);
+				break;
 			case "registrarQuejas":
 				registrarQuejas(request, response);
 				break;
@@ -135,6 +138,13 @@ public class ServletQueja extends HttpServlet {
 	private void ejemplo(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException {
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/vista/example.jsp");
 		List<Queja> listaQuejas= quejaDAO.listarQuejas();
+		request.setAttribute("lista", listaQuejas);
+		dispatcher.forward(request, response);
+	}
+	
+	private void mostrarQuejas(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException {
+		RequestDispatcher dispatcher = request.getRequestDispatcher("./vista/mostrarQuejas.jsp");
+		List<Queja> listaQuejas = quejaDAO.listarQuejas();
 		request.setAttribute("lista", listaQuejas);
 		dispatcher.forward(request, response);
 	}
