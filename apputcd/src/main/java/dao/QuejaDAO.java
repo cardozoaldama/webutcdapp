@@ -166,6 +166,7 @@ public class QuejaDAO {
 		statement.setString(7, queja.getDepartamento());
 		statement.setString(8, queja.getCiudad());
 		statement.setString(9, queja.getBarrio());
+		statement.setInt(10, queja.getIdReclamo());
 		rowActualizar = statement.executeUpdate() > 0;
 		statement.close();
 		con.desconectar();
