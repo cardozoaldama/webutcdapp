@@ -58,17 +58,17 @@
 								<tr>
 									<!--<td><c:out value="${articulo.idarticulo}"/></td>-->
 									<!-- Un desastre aquí -->
+									<td><c:out value="${queja.nombre}"/></td>
 									<td><c:out value="${queja.apellido}"/></td>
 									<td><c:out value="${queja.telefono}"/></td>
-									<td><c:out value="${queja.nombre}"/></td>
-									<td><c:out value="${queja.direccion}"/></td>
-									<td><c:out value="${queja.referencia}"/></td>
 									<td><c:out value="${queja.departamento}"/></td>
-									<td><c:out value="${queja.correo}"/></td>
 									<td><c:out value="${queja.ciudad}"/></td>
 									<td><c:out value="${queja.barrio}"/></td>
+									<td><c:out value="${queja.direccion}"/></td>
+									<td><c:out value="${queja.correo}"/></td>
+									<td><c:out value="${queja.referencia}"/></td>
 									 
-									<%-- <td><a href="queja?action=showedit&id=<c:out value="${queja.id_reclamo}" />">Editar</a></td> --%>
+									<td><a href="queja?action=showedit&id=<c:out value="${queja.id_reclamo}" />">Editar</a></td>
 									<td><a href="queja?action=eliminar&id=<c:out value="${queja.id_reclamo}"/>">Eliminar</a> </td>
 									
 								</tr>
