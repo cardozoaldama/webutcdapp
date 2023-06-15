@@ -13,7 +13,6 @@ import java.util.concurrent.atomic.AtomicInteger;
 import javax.servlet.http.HttpServletRequest;
 
 import conexion.Conexion;
-import entidad.Articulo;
 import entidad.Queja;
 
 // TODO: Agregar los mismo que hay en ArticuloDAO.java
@@ -33,8 +32,8 @@ public class QuejaDAO {
 	// Contador que ira incrementando el valor del ID el cual genera automaticamente.
 	//private static final AtomicLong contadorid = new AtomicLong(104);
 	private AtomicInteger contadorid = new AtomicInteger(0);
-	private String activoS = "S";
-	private String inactivoN = "N";
+	// private String activoS = "S";
+	// private String inactivoN = "N";
 	// Para obtener fecha-hora actual del sistema operativo.
 	Long datetime = System.currentTimeMillis();
 	Timestamp timestamp = new Timestamp(datetime);

@@ -13,7 +13,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import dao.QuejaDAO;
-import entidad.Articulo;
 import entidad.Queja;
 
 // TODO: Agregar lo mismo que hay en ServletArticulo.java
