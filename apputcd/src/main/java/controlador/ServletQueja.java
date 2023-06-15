@@ -116,9 +116,9 @@ public class ServletQueja extends HttpServlet {
 	}
 	
 	private void showEditar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException {
-		Queja queja = quejaDAO.obtenerPorId(Integer.parseInt(request.getParameter(request.getParameter("id_reclamo"))));
+		Queja queja = quejaDAO.obtenerPorId(Integer.parseInt(request.getParameter("id_reclamo")));
 		request.setAttribute("queja", queja);
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/vista/editar_articulos.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("./vista/editarQuejas.jsp");
 		dispatcher.forward(request, response);
 	}
 	private void editar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException  {
