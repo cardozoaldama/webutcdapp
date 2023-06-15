@@ -7,7 +7,8 @@ package entidad;
 // Esta clase Queja también conecta con ServletQueja.java
 
 public class Queja {
-	private int id_reclamo;
+	// private int id_reclamo;
+	private int idreclamo;
 	// private String numero_reclamo;
 	// private Integer nis;
 	private String telefono;
@@ -30,9 +31,9 @@ public class Queja {
 	// public Queja(int id_reclamo, Integer nis, String telefono, String nombre,
 	// String apellido, String direccion, String referencia, String correo, String
 	// departamento, String ciudad, String barrio) {
-	public Queja(int id_reclamo, String nombre, String apellido, String telefono, String departamento, String ciudad,
+	public Queja(int idreclamo, String nombre, String apellido, String telefono, String departamento, String ciudad,
 			String barrio, String direccion, String correo, String referencia) {
-		this.id_reclamo = id_reclamo;
+		this.idreclamo = idreclamo;
 		// this.numero_reclamo = numero_reclamo;
 		// this.nis = nis;
 		this.telefono = telefono;
@@ -73,7 +74,7 @@ public class Queja {
 
 	// GETTERS
 	public int getIdReclamo() {
-		return id_reclamo;
+		return idreclamo;
 	}
 
 	/*
@@ -126,8 +127,8 @@ public class Queja {
 	}
 
 	// SETTERS
-	public void setIdReclamo(int id_reclamo) {
-		this.id_reclamo = id_reclamo;
+	public void setIdReclamo(int idreclamo) {
+		this.idreclamo = idreclamo;
 	}
 
 	/*
