@@ -25,7 +25,7 @@ public class Queja {
 	
 	// public Queja(int id_reclamo, String numero_reclamo, int nis, String telefono, String nombre, String apellido, String direccion, String referencia, String numero_movil, String correo, String observacion, String departamento, String ciudad, String barrio)
 	// public Queja(int id_reclamo, Integer nis, String telefono, String nombre, String apellido, String direccion, String referencia, String correo, String departamento, String ciudad, String barrio) {
-	public Queja(int id_reclamo, String telefono, String nombre, String apellido, String direccion, String referencia, String correo, String departamento, String ciudad, String barrio) {
+	public Queja(int id_reclamo, String nombre, String apellido, String telefono, String departamento, String ciudad, String barrio, String direccion, String correo, String referencia) {
 		this.id_reclamo = id_reclamo;
 		// this.numero_reclamo = numero_reclamo;
 		// this.nis = nis;
