@@ -33,7 +33,7 @@
 			<table>
 				<tr>
 					<td><label></label></td>
-					<td><input type="hidden" name="id" value="<c:out value="${queja.id_reclamo}"></c:out>" ></td>
+					<td><input type="hidden" name="id" value="<c:out value="${queja.idreclamo}"></c:out>" ></td>
 				</tr>
 				<tr>
 					<td><label>Nombre</label></td>
