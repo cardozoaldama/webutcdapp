@@ -41,7 +41,7 @@ public class QuejaDAO {
 
 	// PROCEDIMIENTO DE INSERCIÓN
 	public boolean insertar(Queja queja, HttpServletRequest request) throws SQLException {
-		String sql = "INSERT INTO sys_reclamo_aux (id_reclamo, nombre, apellido, telefono, departamento, ciudad, barrio, direccion, correo, referencia, fecha_hora_recepcion) VALUES (?,?,?,?,?,?,?,?,?,?,?);";
+		String sql = "INSERT INTO sys_reclamo_aux (idreclamo, nombre, apellido, telefono, departamento, ciudad, barrio, direccion, correo, referencia, fecha_hora_recepcion) VALUES (?,?,?,?,?,?,?,?,?,?,?);";
 		con.conectar();
 		connection = con.getJdbcConnection();
 		PreparedStatement statement = connection.prepareStatement(sql);
@@ -93,7 +93,7 @@ public class QuejaDAO {
 		ResultSet resulSet = statement.executeQuery(sql);
 
 		while (resulSet.next()) {
-			int id_reclamo = resulSet.getInt("id_reclamo");
+			int idreclamo = resulSet.getInt("idreclamo");
 			String nombre = resulSet.getString("nombre");
 			String apellido = resulSet.getString("apellido");
 			String telefono = resulSet.getString("telefono");
@@ -107,11 +107,11 @@ public class QuejaDAO {
 			// String numero_reclamo = resulSet.getString("numero_reclamo");
 			// String numero_movil = resulSet.getString("numero_movil");
 			// String observacion = resulSet.getString("observacion");
-			// Queja queja = new Queja(id_reclamo, numero_reclamo, nis, telefono, nombre,
+			// Queja queja = new Queja(idreclamo, numero_reclamo, nis, telefono, nombre,
 			// apellido, direccion, referencia, numero_movil, correo, observacion,
 			// departamento, ciudad, barrio);
 			// TODO: Take an eye with this:
-			Queja queja = new Queja(id_reclamo, nombre, apellido, telefono, departamento, ciudad, barrio, direccion,
+			Queja queja = new Queja(idreclamo, nombre, apellido, telefono, departamento, ciudad, barrio, direccion,
 					correo, referencia);
 			listaQuejas.add(queja);
 		}
@@ -121,7 +121,7 @@ public class QuejaDAO {
 
 	// Este método está relacionado con el contador para insertar el ID.
 	private int obtenerUltimoIdReclamo() throws SQLException {
-		String sql = "SELECT MAX(id_reclamo) FROM sys_reclamo_aux";
+		String sql = "SELECT MAX(idreclamo) FROM sys_reclamo_aux";
 		try (Statement statement = connection.createStatement(); ResultSet resultSet = statement.executeQuery(sql)) {
 			if (resultSet.next()) {
 				return resultSet.getInt(1);
@@ -132,24 +132,24 @@ public class QuejaDAO {
 	}
 
 	// OBTENER POR ID:
-	public Queja obtenerPorId(int id_reclamo) throws SQLException {
+	public Queja obtenerPorId(int idreclamo) throws SQLException {
 		Queja queja = null;
-		String sql = "SELECT * FROM sys_reclamo_aux WHERE id_reclamo=?";
+		String sql = "SELECT * FROM sys_reclamo_aux WHERE idreclamo=?";
 		con.conectar();
 		connection = con.getJdbcConnection();
 		PreparedStatement statement = connection.prepareStatement(sql);
-		statement.setInt(1, id_reclamo);
+		statement.setInt(1, idreclamo);
 		ResultSet res = statement.executeQuery();
 
 		if (res.next()) {
-			// queja = new Queja(res.getInt("id_reclamo"), res.getString("numero_reclamo"),
+			// queja = new Queja(res.getInt("idreclamo"), res.getString("numero_reclamo"),
 			// res.getInt("nis"), res.getString("telefono"), res.getString("nombre"),
 			// res.getString("apellido"), res.getString("direccion"),
 			// res.getString("referencia"), res.getString("numero_movil"),
 			// res.getString("correo"), res.getString("observacion"),
 			// res.getString("departamento"), res.getString("ciudad"),
 			// res.getString("barrio"));
-			queja = new Queja(res.getInt("id_reclamo"), res.getString("nombre"), res.getString("apellido"),
+			queja = new Queja(res.getInt("idreclamo"), res.getString("nombre"), res.getString("apellido"),
 					res.getString("telefono"), res.getString("departamento"), res.getString("ciudad"),
 					res.getString("barrio"), res.getString("direccion"), res.getString("correo"),
 					res.getString("referencia"));
@@ -164,8 +164,8 @@ public class QuejaDAO {
 		boolean rowActualizar = false;
 		// String sql = "UPDATE sys_reclamo_aux SET
 		// numero_reclamo=?,nis=?,telefono=?,nombre=?,apellido=?,direccion=?,referencia=?,numero_movil=?,correo=?,observacion=?,departamento=?,ciudad=?,barrio=?
-		// WHERE id_reclamo=?";
-		String sql = "UPDATE sys_reclamo_aux SET telefono=?,nombre=?,apellido=?,direccion=?,referencia=?,correo=?,departamento=?,ciudad=?,barrio=? WHERE id_reclamo=?";
+		// WHERE idreclamo=?";
+		String sql = "UPDATE sys_reclamo_aux SET telefono=?,nombre=?,apellido=?,direccion=?,referencia=?,correo=?,departamento=?,ciudad=?,barrio=? WHERE idreclamo=?";
 		con.conectar();
 		connection = con.getJdbcConnection();
 		PreparedStatement statement = connection.prepareStatement(sql);
@@ -192,7 +192,7 @@ public class QuejaDAO {
 	// Por ahora hace la eliminación y no inactivación
 	public boolean actualizarInactivar(Queja queja, HttpServletRequest request) throws SQLException {
 		boolean rowInactivar = false;
-		String sql = "DELETE FROM sys_reclamo_aux WHERE id_reclamo=?";
+		String sql = "DELETE FROM sys_reclamo_aux WHERE idreclamo=?";
 		con.conectar();
 		connection = con.getJdbcConnection();
 		PreparedStatement statement = connection.prepareStatement(sql);
@@ -208,7 +208,7 @@ public class QuejaDAO {
 	// ELIMINAR RECLAMOS
 	public boolean eliminar(Queja queja) throws SQLException {
 		boolean rowEliminar = false;
-		String sql = "DELETE FROM sys_reclamo_aux WHERE id_reclamo=?";
+		String sql = "DELETE FROM sys_reclamo_aux WHERE idreclamo=?";
 		con.conectar();
 		connection = con.getJdbcConnection();
 		PreparedStatement statement = connection.prepareStatement(sql);
