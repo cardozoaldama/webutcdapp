@@ -6,7 +6,7 @@
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<script src="js/bootstrap.min.js"></script>
-		<title>Editar Articulos</title>
+		<title>Editar Quejas</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
@@ -28,39 +28,55 @@
 		<h1>La clase columna</h1>
 		<input type="button" onclick="history.back()" name="volver atrás" value="Atrás">
 	     <p></p>
-		<h1>Editar Artículo</h1>
-		<form action="articulo?action=editar" method="post" >
+		<h1>Editar Queja</h1>
+		<form action="queja?action=editar" method="post" >
 			<table>
 				<tr>
 					<td><label></label></td>
-					<td><input type="hidden" name="id" value="<c:out value="${articulo.idarticulo}"></c:out>" ></td>
-				</tr>
-				<tr>
-					<td><label>Código</label></td>
-					<td><input type="text" name="codigo" value='<c:out value="${articulo.codigo}"></c:out>' ></td>
+					<td><input type="hidden" name="id" value="<c:out value="${queja.id_reclamo}"></c:out>" ></td>
 				</tr>
 				<tr>
 					<td><label>Nombre</label></td>
-					<td><input type="text" name="nombre" value='<c:out value="${articulo.nombre}"></c:out>' ></td>
+					<td><input type="text" name="nombre" value='<c:out value="${queja.nombre}"></c:out>' ></td>
 				</tr>
 				<tr>
-					<td><label>Descripción</label></td>
-					<td><input type="text" name="descripcion" value='<c:out value="${articulo.descripcion}"></c:out>' ></td>
+					<td><label>Apellido</label></td>
+					<td><input type="text" name="apellido" value='<c:out value="${queja.apelllido}"></c:out>' ></td>
 				</tr>
 				<tr>
-					<td><label>Existencia</label></td>
-					<td><input type="text" name="existencia" value='<c:out value="${articulo.existencia }"></c:out>' ></td>
+					<td><label>Teléfono</label></td>
+					<td><input type="text" name="telefono" value='<c:out value="${queja.telefono}"></c:out>' ></td>
 				</tr>
-				
 				<tr>
-					<td><label>Precio</label></td>
-					<td><input type="text" name="precio" value='<c:out value="${articulo.precio }"></c:out>' ></td>
+					<td><label>Departamento</label></td>
+					<td><input type="text" name="departamento" value='<c:out value="${queja.departamento}"></c:out>' ></td>
+				</tr>
+				<tr>
+					<td><label>Ciudad</label></td>
+					<td><input type="text" name="ciudad" value='<c:out value="${queja.ciudad}"></c:out>' ></td>
+				</tr>
+				<tr>
+					<td><label>Barrio</label></td>
+					<td><input type="text" name="barrio" value='<c:out value="${queja.barrio}"></c:out>' ></td>
+				</tr>
+				<tr>
+					<td><label>Dirección</label></td>
+					<td><input type="text" name="direccion" value='<c:out value="${queja.direccion}"></c:out>' ></td>
+				</tr>
+				<tr>
+					<td><label>Correo electrónico</label></td>
+					<td><input type="text" name="correo" value='<c:out value="${queja.correo}"></c:out>' ></td>
+				</tr>
+				<tr>
+					<td><label>Referencias</label></td>
+					<td><input type="text" name="referencia" value='<c:out value="${queja.referencia}"></c:out>' ></td>
+				</tr>
+				<!-- ACTION BUTTONS -->
+				<tr>
+					<td><input type="submit" value="Actualizar" name="agregar" onclick="limpiarCampos()"></td>	
+					<td><input type="button" onclick="redirigirPrincipal()" value="Cancelar" name="cancelar" /></td>	
 				</tr>
 			</table>
-			<tr>
-			<td><input type="submit" value="Actualizar" name="agregar" onclick="limpiarCampos()"></td>	
-			<td><input type="button" onclick="redirigirPrincipal()" value="Cancelar" name="cancelar" /></td>	
-			</tr>
 		</form>
 		
 		<%-- Verificar si hay un mensaje en la solicitud y mostrarlo --%>
