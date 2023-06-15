@@ -110,7 +110,7 @@ public class QuejaDAO {
 			// Queja queja = new Queja(idreclamo, numero_reclamo, nis, telefono, nombre,
 			// apellido, direccion, referencia, numero_movil, correo, observacion,
 			// departamento, ciudad, barrio);
-			// TODO: Take an eye with this:
+			// TODO: Take an eye on this:
 			Queja queja = new Queja(idreclamo, nombre, apellido, telefono, departamento, ciudad, barrio, direccion,
 					correo, referencia);
 			listaQuejas.add(queja);
