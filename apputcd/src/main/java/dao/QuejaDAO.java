@@ -40,7 +40,7 @@ public class QuejaDAO {
 	
 	// PROCEDIMIENTO DE INSERCIÓN	
 	public boolean insertar(Queja queja, HttpServletRequest request) throws SQLException {
-		String sql = "INSERT INTO sys_reclamo_aux (id_reclamo, nombre, apellido, telefono, nis, departamento, ciudad, barrio, direccion, correo, referencia, fecha_hora_recepcion) VALUES (?,?,?,?,?,?,?,?,?,?,?,?);";
+		String sql = "INSERT INTO sys_reclamo_aux (id_reclamo, nombre, apellido, telefono, departamento, ciudad, barrio, direccion, correo, referencia, fecha_hora_recepcion) VALUES (?,?,?,?,?,?,?,?,?,?,?);";
 		con.conectar();
 		connection = con.getJdbcConnection();
 		PreparedStatement statement = connection.prepareStatement(sql);
@@ -53,7 +53,7 @@ public class QuejaDAO {
 		statement.setString(2, queja.getNombre());
 		statement.setString(3, queja.getApellido());
 		statement.setString(4, queja.getTelefono());
-		statement.setInt(5, queja.getNis());
+		// statement.setInt(5, queja.getNis());
 		statement.setString(6, queja.getDepartamento());
 		statement.setString(7, queja.getCiudad());
 		statement.setString(8, queja.getBarrio());
@@ -94,7 +94,7 @@ public class QuejaDAO {
 			String nombre = resulSet.getString("nombre");
 			String apellido = resulSet.getString("apellido");
 			String telefono = resulSet.getString("telefono");
-			int nis = resulSet.getInt("nis");
+			// int nis = resulSet.getInt("nis");
 			String departamento = resulSet.getString("departamento");
 			String ciudad = resulSet.getString("ciudad");
 			String barrio = resulSet.getString("barrio");
@@ -105,7 +105,7 @@ public class QuejaDAO {
 			// String numero_movil = resulSet.getString("numero_movil");
 			// String observacion = resulSet.getString("observacion");
 			// Queja queja = new Queja(id_reclamo, numero_reclamo, nis, telefono, nombre, apellido, direccion, referencia, numero_movil, correo, observacion, departamento, ciudad, barrio);
-			Queja queja = new Queja(id_reclamo, nis, apellido, telefono, nombre, departamento, ciudad, barrio, direccion, correo, referencia);
+			Queja queja = new Queja(id_reclamo, apellido, telefono, nombre, departamento, ciudad, barrio, direccion, correo, referencia);
 			listaQuejas.add(queja);
 		}
 		con.desconectar();
@@ -137,7 +137,7 @@ public class QuejaDAO {
 		
 		if (res.next()) {
 			// queja = new Queja(res.getInt("id_reclamo"), res.getString("numero_reclamo"), res.getInt("nis"), res.getString("telefono"), res.getString("nombre"), res.getString("apellido"), res.getString("direccion"), res.getString("referencia"), res.getString("numero_movil"), res.getString("correo"), res.getString("observacion"), res.getString("departamento"), res.getString("ciudad"), res.getString("barrio"));
-			queja = new Queja(res.getInt("id_reclamo"), res.getInt("nis"), res.getString("telefono"), res.getString("nombre"), res.getString("apellido"), res.getString("direccion"), res.getString("referencia"), res.getString("correo"), res.getString("departamento"), res.getString("ciudad"), res.getString("barrio"));
+			queja = new Queja(res.getInt("id_reclamo"), res.getString("telefono"), res.getString("nombre"), res.getString("apellido"), res.getString("direccion"), res.getString("referencia"), res.getString("correo"), res.getString("departamento"), res.getString("ciudad"), res.getString("barrio"));
 		}
 		res.close();
 		con.desconectar();
@@ -153,7 +153,7 @@ public class QuejaDAO {
 		connection = con.getJdbcConnection();
 		PreparedStatement statement = connection.prepareStatement(sql);
 		// statement.setString(1, queja.getNumeroReclamo());
-		statement.setInt(2, queja.getNis());
+		// statement.setInt(2, queja.getNis());
 		statement.setString(3, queja.getTelefono());
 		statement.setString(4, queja.getNombre());
 		statement.setString(5, queja.getApellido());

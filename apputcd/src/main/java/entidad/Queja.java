@@ -9,7 +9,7 @@ package entidad;
 public class Queja {
 	private int id_reclamo;
 	// private String numero_reclamo;
-	private Integer nis;
+	// private Integer nis;
 	private String telefono;
 	private String nombre;
 	private String apellido;
@@ -24,10 +24,11 @@ public class Queja {
 	private String barrio;
 	
 	// public Queja(int id_reclamo, String numero_reclamo, int nis, String telefono, String nombre, String apellido, String direccion, String referencia, String numero_movil, String correo, String observacion, String departamento, String ciudad, String barrio)
-	public Queja(int id_reclamo, Integer nis, String telefono, String nombre, String apellido, String direccion, String referencia, String correo, String departamento, String ciudad, String barrio) {
+	// public Queja(int id_reclamo, Integer nis, String telefono, String nombre, String apellido, String direccion, String referencia, String correo, String departamento, String ciudad, String barrio) {
+	public Queja(int id_reclamo, String telefono, String nombre, String apellido, String direccion, String referencia, String correo, String departamento, String ciudad, String barrio) {
 		this.id_reclamo = id_reclamo;
 		// this.numero_reclamo = numero_reclamo;
-		this.nis = nis;
+		// this.nis = nis;
 		this.telefono = telefono;
 		this.nombre = nombre;
 		this.apellido = apellido;
@@ -42,9 +43,10 @@ public class Queja {
 	}
 	
 	// No sabemos en dónde lo llaman.
-	public void QuejaReg(String numero_reclamo, Integer nis, String telefono, String nombre, String apellido, String direccion, String referencia, String numero_movil, String correo, String observacion, String departamento, String ciudad, String barrio) {
+	// public void QuejaReg(String numero_reclamo, Integer nis, String telefono, String nombre, String apellido, String direccion, String referencia, String numero_movil, String correo, String observacion, String departamento, String ciudad, String barrio) {
+	public void QuejaReg(String numero_reclamo, String telefono, String nombre, String apellido, String direccion, String referencia, String numero_movil, String correo, String observacion, String departamento, String ciudad, String barrio) {
 		// this.numero_reclamo = numero_reclamo;
-		this.nis = nis;
+		// this.nis = nis;
 		this.telefono = telefono;
 		this.nombre = nombre;
 		this.apellido = apellido;
@@ -67,9 +69,11 @@ public class Queja {
 		return numero_reclamo;
 	}
 	*/
+	/*
 	public int getNis() {
 		return nis;
 	}
+	*/
 	public String getTelefono() {
 		return telefono;
 	}
@@ -121,9 +125,11 @@ public class Queja {
 		this.numero_reclamo = numero_reclamo;
 	}
 	*/
+	/*
 	public void setNis(Integer nis) {
 		this.nis = nis;
 	}
+	*/
 	public void setTelefono(String telefono) {
 		this.telefono = telefono;
 	}
