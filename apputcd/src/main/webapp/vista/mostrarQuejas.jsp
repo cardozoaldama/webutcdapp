@@ -29,53 +29,52 @@
 		<p></p>
 		<p></p>
 		<div class="container-fluid">
-	            <h1>La clase columna</h1>
-	     <input type="button" onclick="history.back()" name="volver atrás" value="Atrás">
-	     <p></p>
-	            <p>Lista de Quejas</p>
-	        </div>
-	        <div class="container-fluid">
-	            <h2></h2>
-	            <div class="table-responsive">
-	                <table class="table table-hover">
-	                    <thead>
-	                        <tr>
-	                            <!-- <th>Id</th>-->
-	                            <th>Nombre</th>
-								<th>Apellido</th>
-								<th>Teléfono</th>
-								<th>Departamento</th>
-								<th>Ciudad</th>
-								<th>Barrio</th>
-								<th>Dirección</th>
-								<th>Correo Electrónico</th>
-								<th>Referencias para llegar al lugar</th>
-								<th colspan=2>Acciones</th>
-	                        </tr>
-	                    </thead>
-	                    <tbody>
-	                        <c:forEach var="queja" items="${lista}">
-								<tr>
-									<!--<td><c:out value="${articulo.idarticulo}"/></td>-->
-									<td><c:out value="${queja.nombre}"/></td>
-									<td><c:out value="${queja.apellido}"/></td>
-									<td><c:out value="${queja.telefono}"/></td>
-									<td><c:out value="${queja.departamento}"/></td>
-									<td><c:out value="${queja.ciudad}"/></td>
-									<td><c:out value="${queja.barrio}"/></td>
-									<td><c:out value="${queja.direccion}"/></td>
-									<td><c:out value="${queja.correo}"/></td>
-									<td><c:out value="${queja.referencia}"/></td>
-									<td><a href="queja?action=showedit&id=<c:out value="${queja.idreclamo}" />">Editar</a></td>
-									<td><a href="queja?action=eliminar&id=<c:out value="${queja.idreclamo}"/>">Eliminar</a> </td>
-									
-								</tr>
-							</c:forEach>
-	                    </tbody>
-	                </table>
-	            </div> 
-	        </div>
-			<table>
+	        <h1>La clase columna</h1>
+	     	<input type="button" onclick="history.back()" name="volver atrás" value="Atrás">
+	     	<p></p>
+			<p>Lista de Quejas</p>
+	    </div>
+		<div class="container-fluid">
+	        <h2></h2>
+			<div class="table-responsive">
+				<table class="table table-hover">
+					<thead>
+	                    <tr>
+	                        <!-- <th>Id</th>-->
+	                        <th>Nombre</th>
+							<th>Apellido</th>
+							<th>Teléfono</th>
+							<th>Departamento</th>
+							<th>Ciudad</th>
+							<th>Barrio</th>
+							<th>Dirección</th>
+							<th>Correo Electrónico</th>
+							<th>Referencias para llegar al lugar</th>
+							<th colspan=2>Acciones</th>
+	                	</tr>
+	                </thead>
+					<tbody>
+						<c:forEach var="queja" items="${lista}">
+							<tr>
+								<!--<td><c:out value="${articulo.idarticulo}"/></td>-->
+								<td><c:out value="${queja.nombre}"/></td>
+								<td><c:out value="${queja.apellido}"/></td>
+								<td><c:out value="${queja.telefono}"/></td>
+								<td><c:out value="${queja.departamento}"/></td>
+								<td><c:out value="${queja.ciudad}"/></td>
+								<td><c:out value="${queja.barrio}"/></td>
+								<td><c:out value="${queja.direccion}"/></td>
+								<td><c:out value="${queja.correo}"/></td>
+								<td><c:out value="${queja.referencia}"/></td>
+								<td><a href="queja?action=showedit&id=<c:out value="${queja.idreclamo}" />">Editar</a></td>
+								<td><a href="queja?action=eliminar&id=<c:out value="${queja.idreclamo}"/>">Eliminar</a> </td>	
+							</tr>
+						</c:forEach>
+	            	</tbody>
+	        	</table>
+	    	</div> 
+	    </div>
+		<table>
 			<tr>
 			</tr>
 		</table>
