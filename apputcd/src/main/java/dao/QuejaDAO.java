@@ -105,6 +105,7 @@ public class QuejaDAO {
 			// String numero_movil = resulSet.getString("numero_movil");
 			// String observacion = resulSet.getString("observacion");
 			// Queja queja = new Queja(id_reclamo, numero_reclamo, nis, telefono, nombre, apellido, direccion, referencia, numero_movil, correo, observacion, departamento, ciudad, barrio);
+			// TODO: Take an eye with this:
 			Queja queja = new Queja(id_reclamo, apellido, telefono, nombre, departamento, ciudad, barrio, direccion, correo, referencia);
 			listaQuejas.add(queja);
 		}
@@ -148,7 +149,7 @@ public class QuejaDAO {
 	public boolean actualizar(Queja queja) throws SQLException {
 		boolean rowActualizar = false;
 		// String sql = "UPDATE sys_reclamo_aux SET numero_reclamo=?,nis=?,telefono=?,nombre=?,apellido=?,direccion=?,referencia=?,numero_movil=?,correo=?,observacion=?,departamento=?,ciudad=?,barrio=? WHERE id_reclamo=?";
-		String sql = "UPDATE sys_reclamo_aux SET nis=?,telefono=?,nombre=?,apellido=?,direccion=?,referencia=?,correo=?,departamento=?,ciudad=?,barrio=? WHERE id_reclamo=?";
+		String sql = "UPDATE sys_reclamo_aux SET telefono=?,nombre=?,apellido=?,direccion=?,referencia=?,correo=?,departamento=?,ciudad=?,barrio=? WHERE id_reclamo=?";
 		con.conectar();
 		connection = con.getJdbcConnection();
 		PreparedStatement statement = connection.prepareStatement(sql);
