@@ -196,7 +196,7 @@ public class QuejaDAO {
 			connection = con.getJdbcConnection();
 			PreparedStatement statement = connection.prepareStatement(sql);
 			//statement.setInt(1, articulo.getIdarticulo());
-			statement.setInt(1, queja.getIdReclamo());
+			// statement.setInt(1, queja.getIdReclamo());
 			rowEliminar = statement.executeUpdate() > 0;
 			statement.close();
 			con.desconectar();
