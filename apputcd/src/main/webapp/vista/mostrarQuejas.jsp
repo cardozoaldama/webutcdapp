@@ -6,7 +6,10 @@
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<script src="js/bootstrap.min.js"></script>
-		<title>Lista Articulos</title>
+		<title>Mostrar Quejas</title>
+		<link rel="icon" type="image/x-icon" href="../img/favicon.ico" />
+		<!-- Font Awesome -->
+		<script src="https://kit.fontawesome.com/08f7b10637.js" crossorigin="anonymous"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
