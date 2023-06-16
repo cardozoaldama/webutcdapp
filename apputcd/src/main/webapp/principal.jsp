@@ -24,6 +24,7 @@
 			<div class="container">
 				<div class="menu_container">
 					<img class="menu_container__img" src="./img/clean.png" alt="Logotipo de la empresa">
+					<h1>¡Bienvenido a SIGRAP!</h1>
 					<p class="menu_container__title"><i class="fa-solid fa-bars"></i> Menú de opciones</p>
 					<div class="button"><a class="button__link button__link-text" href="principal.jsp"><i class="fa-solid fa-house-user"></i> Inicio</a></div>
 					<div class="button"><a class="button__link button__link--quejas button__link-text" href="quejas.jsp"><i class="fa-solid fa-newspaper"></i> Ingresar una queja</a></div>
