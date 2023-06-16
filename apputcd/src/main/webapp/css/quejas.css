@@ -64,6 +64,10 @@
 	color: #f6f5f4;
 }
 
+.btn {
+	margin-top: 10px !important;
+}
+
 /* RESPONSIVE WEB DESIGN */
 
 /* iPhone 4 and iPhone 5/SE support */
