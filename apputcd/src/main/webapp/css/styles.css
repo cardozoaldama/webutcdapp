@@ -79,8 +79,8 @@ html {
 }
 
 .btn:disabled {
-	background-color: #fff0f8;
-	color: #ffb5b6;
+	background-color: #96aa83;
+	color: #e7ffb0;
 	cursor: not-allowed;
 }
 
@@ -95,7 +95,7 @@ html {
 
 .help-block {
 	display: block;
-	color: #ed333b;
+	color: #f66151;
 	margin-top: 2px;
 }
 
