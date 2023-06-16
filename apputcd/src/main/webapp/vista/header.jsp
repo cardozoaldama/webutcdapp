@@ -14,7 +14,7 @@
  --%>	
 	<nav class="navbar navbar-dark bg-dark fixed-top">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="#">Bienvenido ${sessionScope.usuario.nombre} a Programacion I</a>
+			<a class="navbar-brand" href="#">Bienvenido ${sessionScope.usuario.nombre} a SIGRAP</a>
 			<button class="navbar-toggler" type="button"
 				data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
 				aria-controls="offcanvasDarkNavbar">
@@ -32,7 +32,6 @@
 						<li class="nav-item"><a class="nav-link active" aria-current="page" href="principal.jsp">Inicio</a></li>
 						<li class="nav-item"><a class="nav-link active" aria-current="page" href="queja?action=mostrarQuejas">Mostrar Quejas</a></li>
 						<li class="nav-item"><a class="nav-link active" aria-current="page" href="queja?action=registrarQuejas">Ingresar una queja</a></li>
-						<li class="nav-item"><a class="nav-link active" aria-current="page" href="articulo?action=comboDatos">Datos Combos</a></li>
 						<li class="nav-item"><a class="nav-link active" aria-current="page" href="usuario?tipo=cerrarSesion">Cerrar Sesion</a></li>					
 					</ul>
 				</div>
