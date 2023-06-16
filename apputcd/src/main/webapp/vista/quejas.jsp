@@ -68,8 +68,8 @@
 						<label for="referencia" class="label_container__label"><i class="fa-solid fa-map"></i> Referencias para llegar al lugar:</label>
 						<textarea id="referencia" name="referencia" class="label_container__textarea" placeholder="Intente detallar lo máximo posible. Coloque color de la casa, N° de la casa, algunas referencias para tener encuenta." required></textarea>
 					</div>
-					<input type="submit" value="Enviar formulario" name="agregar" onclick="limpiarCampos()" class="button_send"><i class="fa-solid fa-paper-plane"></i>
-					<input type="button" onclick="redirigirPrincipal()" value="Cancelar" name="cancelar" />
+					<input type="submit" value="Enviar formulario" name="agregar" onclick="limpiarCampos()" class="btn btn-success btn-block btn-lg">
+					<input type="button" onclick="redirigirPrincipal()" class="btn btn-danger btn-block btn-lg" value="Cancelar" name="cancelar" />
 				</form>
 			</div>
 		</div>
