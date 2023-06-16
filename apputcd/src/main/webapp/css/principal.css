@@ -61,13 +61,13 @@ body {
 }
 
 .button__link--quejas {
-	background-color: #3584e4;
+	background-color: #26a269;
 	border-color: #222;
 	color: #fff;
 }
 
 .button__link--informe {
-	background-color: #fd495c;
+	background-color: #77ae2b;
 	border-color: #222;
 	color: #fff;
 }
@@ -79,13 +79,13 @@ body {
 }
 
 .button__link--quejas:hover {
-	background-color: #1a5fb4;
+	background-color: #2ec27e;
 	border-color: #3584e4;
 	color: #fff;
 }
 
 .button__link--informe:hover {
-	background-color: #ed333b;
+	background-color: #33d17a;
 	border-color: #fd495c;
 	color: #fff;
 }
