@@ -18,55 +18,33 @@ public class Queja {
 	private String ciudad;
 	private String barrio;
 
-	// public Queja(int id_reclamo, String numero_reclamo, int nis, String telefono,
-	// String nombre, String apellido, String direccion, String referencia, String
-	// numero_movil, String correo, String observacion, String departamento, String
-	// ciudad, String barrio)
-	// public Queja(int id_reclamo, Integer nis, String telefono, String nombre,
-	// String apellido, String direccion, String referencia, String correo, String
-	// departamento, String ciudad, String barrio) {
 	public Queja(int idreclamo, String nombre, String apellido, String telefono, String departamento, String ciudad,
 			String barrio, String direccion, String correo, String referencia) {
 		this.idreclamo = idreclamo;
-		// this.numero_reclamo = numero_reclamo;
-		// this.nis = nis;
 		this.telefono = telefono;
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.direccion = direccion;
 		this.referencia = referencia;
-		// this.numero_movil = numero_movil;
 		this.correo = correo;
-		// this.observacion = observacion;
 		this.departamento = departamento;
 		this.ciudad = ciudad;
 		this.barrio = barrio;
 	}
 
-	// No sabemos en dónde lo llaman.
-	// public void QuejaReg(String numero_reclamo, Integer nis, String telefono,
-	// String nombre, String apellido, String direccion, String referencia, String
-	// numero_movil, String correo, String observacion, String departamento, String
-	// ciudad, String barrio) {
 	public void QuejaReg(String numero_reclamo, String telefono, String nombre, String apellido, String direccion,
 			String referencia, String numero_movil, String correo, String observacion, String departamento,
 			String ciudad, String barrio) {
-		// this.numero_reclamo = numero_reclamo;
-		// this.nis = nis;
 		this.telefono = telefono;
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.direccion = direccion;
 		this.referencia = referencia;
-		// this.numero_movil = numero_movil;
 		this.correo = correo;
-		// this.observacion = observacion;
 		this.departamento = departamento;
 		this.ciudad = ciudad;
 		this.barrio = barrio;
 	}
-
-	
 
 	/*
 	 * public String getNumeroReclamo() { return numero_reclamo; }
