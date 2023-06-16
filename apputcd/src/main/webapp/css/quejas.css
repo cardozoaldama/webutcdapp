@@ -99,3 +99,8 @@
 		width: 25%;
 	}
 }
+@media screen and (min-width: 1000px) {
+	.navbar-brand {
+		display: block;
+	}
+}
