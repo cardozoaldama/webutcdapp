@@ -27,9 +27,8 @@
 					<h1>¡Bienvenido a SIGRAP!</h1>
 					<p class="menu_container__title"><i class="fa-solid fa-bars"></i> Menú de opciones</p>
 					<div class="button"><a class="button__link button__link-text" href="principal.jsp"><i class="fa-solid fa-house-user"></i> Inicio</a></div>
-					<div class="button"><a class="button__link button__link--quejas button__link-text" href="quejas.jsp"><i class="fa-solid fa-newspaper"></i> Ingresar una queja</a></div>
-					<div class="button"><a class="button__link button__link--informe button__link-text" href="#"><i class="fa-solid fa-file-pdf"></i> Generar un informe</a></div>
-					<div class="button"><a class="button__link button__link--logout button__link-text" href="usuario?tipo=cerrarSesion"><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión</a></div>
+					<div class="button"><a class="button__link button__link--quejas button__link-text" href="queja?action=registrarQuejas"><i class="fa-solid fa-newspaper"></i> Ingresar una queja</a></div>
+					<div class="button"><a class="button__link button__link--informe button__link-text" href="queja?action=mostrarQuejas"><i class="fa-solid fa-file-pdf"></i> Mostrar quejas</a></div>
 				</div>
 			</div>
 		</div>
