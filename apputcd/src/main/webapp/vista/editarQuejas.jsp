@@ -41,7 +41,7 @@
 				</tr>
 				<tr>
 					<td><label>Apellido</label></td>
-					<td><input type="text" name="apellido" value='<c:out value="${queja.apelllido}"></c:out>' ></td>
+					<td><input type="text" name="apellido" value='<c:out value="${queja.apellido}"></c:out>' ></td>
 				</tr>
 				<tr>
 					<td><label>Teléfono</label></td>
