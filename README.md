@@ -104,8 +104,12 @@ Sí, son con fines educativos. No es la intención de reemplazar un sistema ya e
 
 ### ¿Cuál es el estado actual del proyecto?
 
-Está aún en desarrollo, ~pero está listo para ser entregado en la parcial~. Luego de ello, se continuará desarrollando para dar su culminación. Aunque ahora se está preparando el proyecto para entregarlo en el examen final.
+Está aún en desarrollo, ~pero está listo para ser entregado en la parcial~. Luego de ello, se continuará desarrollando para dar su culminación. ~Aunque ahora se está preparando el proyecto para entregarlo en el examen final~.
+
+#### Actualización
+
+Ahora vamos a realizar la continuación de este proyecto para entregar en la examen parcial y al examen final.
 
 ### ¿Quiénes conforman en el proyecto?
 
-El equipo que conforma en el proyecto son los alumnos del quinto año de la Facultad de Ingeniería y Ciencias Básicas, en la carrera de Ingeniería en Sistemas Informáticos de la Universidad Técnica de Comercialización y Desarrollo. La materia en el que estamos cursando es **Programación Orientada a Objetos I**.
+El equipo que conforma en el proyecto son los alumnos del quinto año de la Facultad de Ingeniería y Ciencias Básicas, en la carrera de Ingeniería en Sistemas Informáticos de la Universidad Técnica de Comercialización y Desarrollo. La materia en el que estamos cursando es ~**Programación Orientada a Objetos I**~ **Programación Orientada a Objetos II**.
