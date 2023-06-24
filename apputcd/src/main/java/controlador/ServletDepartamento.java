@@ -47,7 +47,7 @@ public class ServletDepartamento extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		System.out.println("Hola Servlet..");
+		System.out.println("¡Hola ServletDepartamento.java!");
 		String action = request.getParameter("action");
 		System.out.println(action);
 		try {
@@ -74,7 +74,7 @@ public class ServletDepartamento extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		System.out.println("Hola Servlet..");
+		System.out.println("¡Hola ServletDepartamento.java!");
 		doGet(request, response);
 	}
 
