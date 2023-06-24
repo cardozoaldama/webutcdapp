@@ -95,7 +95,7 @@ public class Queja {
 		return barrio;
 	}
 
-	
+
 
 	/*
 	 * public void setNumeroReclamo(String numero_reclamo) { this.numero_reclamo =

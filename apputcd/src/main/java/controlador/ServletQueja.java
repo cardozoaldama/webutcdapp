@@ -155,7 +155,7 @@ public class ServletQueja extends HttpServlet {
 		dispatcher.forward(request, response);
 	}
 
-	
+
 	private void ejemplo(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException, SQLException {
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/vista/example.jsp");

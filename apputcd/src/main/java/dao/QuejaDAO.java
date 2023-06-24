@@ -61,16 +61,16 @@ public class QuejaDAO {
 		statement.setString(8, queja.getDireccion());
 		statement.setString(9, queja.getCorreo());
 		statement.setString(10, queja.getReferencia());
-		
+
 		// Añadir fecha y hora para la recepción de ese reclamo:
 		statement.setTimestamp(11, timestamp);
-		
+
 		statement.setString(12, activoS);
-		
+
 		// Para obtener e insertar el usuario de sesión
 	    String usuarioCreacion = request.getParameter("nombre");
 	    statement.setString(13, usuarioCreacion);
-	    
+
 	    // Para obtener e insertar el usuario de sesión
 	    String usuarioModificacion = request.getParameter("nombre");
 		statement.setString(14, usuarioModificacion);
@@ -84,7 +84,7 @@ public class QuejaDAO {
 
 	// LISTAR TODOS LAS QUEJAS
 	public List<Queja> listarQuejas() throws SQLException {
-		List<Queja> listaQuejas = new ArrayList<Queja>();
+		List<Queja> listaQuejas = new ArrayList<>();
 		String sql = "SELECT * FROM sys_reclamo_aux WHERE activo='S'";
 		con.conectar();
 		connection = con.getJdbcConnection();
