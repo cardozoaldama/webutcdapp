@@ -172,35 +172,20 @@ public class QuejaDAO {
 	// Por ahora hace la eliminación y no inactivación
 	public boolean actualizarInactivar(Queja queja, HttpServletRequest request) throws SQLException {
 		boolean rowInactivar = false;
-		String sql = "UPDATE sys_reclamo_aux SET activo=?, fecha_hora_recepcion=?, usuario_modificacion=? WHERE idreclamo=?";
+		String sql = "UPDATE sys_reclamo_aux SET activo=?, usuario_modificacion=?, fecha_hora_recepcion=? WHERE idreclamo=?";
 		con.conectar();
 		connection = con.getJdbcConnection();
 		PreparedStatement statement = connection.prepareStatement(sql);
 		statement.setString(1, inactivoN);
-		statement.setTimestamp(2, timestamp);
 		String usuarioModificacion = request.getParameter("nombre");
-		statement.setString(3, usuarioModificacion);
+		statement.setString(2, usuarioModificacion);
+		statement.setTimestamp(3, timestamp);
 		statement.setInt(4, queja.getIdreclamo());
 		rowInactivar = statement.executeUpdate() > 0;
 		statement.close();
 		con.desconectar();
 
 		return rowInactivar;
-	}
-
-	// ELIMINAR RECLAMOS
-	public boolean eliminar(Queja queja) throws SQLException {
-		boolean rowEliminar = false;
-		String sql = "DELETE FROM sys_reclamo_aux WHERE idreclamo=?";
-		con.conectar();
-		connection = con.getJdbcConnection();
-		PreparedStatement statement = connection.prepareStatement(sql);
-		// statement.setInt(1, articulo.getIdarticulo());
-		statement.setInt(1, queja.getIdreclamo());
-		rowEliminar = statement.executeUpdate() > 0;
-		statement.close();
-		con.desconectar();
-		return rowEliminar;
 	}
 
 }
