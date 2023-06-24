@@ -20,7 +20,7 @@ public class DepartamentoDAO {
 		con = new Conexion();
 	}
 
-	// listar los departamentos
+	// Listar los departamentos
 	public List<Departamento> listarDepartamentos() throws SQLException {
 
 		List<Departamento> listaArticulos = new ArrayList<>();
