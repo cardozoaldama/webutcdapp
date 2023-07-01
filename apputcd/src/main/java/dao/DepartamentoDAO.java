@@ -100,7 +100,25 @@ public class DepartamentoDAO {
 			
 			return departamento;
 		}
-			
+		
+		// Actualizar Departamentos
+		public boolean actualizar(Departamento departamento, HttpServletRequest request) throws SQLException {
+			boolean rowActualizar = false;
+			String sql = "UPDATE sys_departamento SET nombre=?, observacion=?, fecha_hora_recepcion=?, usuario_modificacion=?, WHERE iddepartamento=?";
+			con.conectar();
+			connection = con.getJdbcConnection();
+			PreparedStatement statement = connection.prepareStatement(sql);
+			statement.setString(1, departamento.getNombre());
+			statement.setString(2, departamento.getObservacion());
+			statement.setTimestamp(3, timestamp);
+			String usuarioModificacion = request.getParameter("nombre");
+			statement.setString(4, usuarioModificacion);
+			statement.setInt(5, departamento.getIddepartamento());
+			statement.close();
+			con.desconectar();
+			return rowActualizar;
+		}
+		
 	// Listar los departamentos
 	public List<Departamento> listarDepartamentos() throws SQLException {
 
