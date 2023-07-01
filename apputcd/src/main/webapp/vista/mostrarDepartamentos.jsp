@@ -32,7 +32,7 @@
 	        <h1>La clase columna</h1>
 	     	<input type="button" onclick="history.back()" name="volver atrás" value="Atrás">
 	     	<p></p>
-			<p>Lista de Quejas</p>
+			<p>Lista de Departamentos</p>
 	    </div>
 		<div class="container-fluid">
 	        <h2></h2>
