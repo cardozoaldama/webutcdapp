@@ -139,8 +139,7 @@ public class DepartamentoDAO {
 		
 	// Listar los departamentos
 	public List<Departamento> listarDepartamentos() throws SQLException {
-
-		List<Departamento> listaArticulos = new ArrayList<>();
+		List<Departamento> listaDepartamentos = new ArrayList<>();
 		String sql = "SELECT iddepartamento, nombre, observacion FROM sys_departamento";
 		con.conectar();
 		connection = con.getJdbcConnection();
@@ -152,10 +151,10 @@ public class DepartamentoDAO {
 			String nombre = resulSet.getString("nombre");
 			String observacion = resulSet.getString("observacion");
 			Departamento departamento = new Departamento(iddepartamento, nombre, observacion);
-			listaArticulos.add(departamento);
+			listaDepartamentos.add(departamento);
 		}
 		con.desconectar();
-		return listaArticulos;
+		return listaDepartamentos;
 	}
 
 }
