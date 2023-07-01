@@ -65,6 +65,10 @@ public class ServletDepartamento extends HttpServlet {
 				System.out.println("Entrando... Registrando... Departamento...");
 				registrar(request, response);
 				break;
+			case "mostrarDepartamentos":
+				System.out.println("Entrando en mostrarDepartamentos en ServletDepartamento.java");
+				mostrarDepartamentos(request, response);
+				break;
 			default:
 				break;
 			}
@@ -72,6 +76,14 @@ public class ServletDepartamento extends HttpServlet {
 			e.getStackTrace();
 		}
 
+	}
+
+	private void mostrarDepartamentos(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException {
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/vista/mostrarDepartamentos.jsp");
+		List<Departamento> listaDepartamentos = departamentoDAO.listarDepartamentos();
+		request.setAttribute("lista", listaDepartamentos);
+		dispatcher.forward(request, response);
+		System.out.println(listaDepartamentos);		
 	}
 
 	// Literalmente realiza el registro junto a DepartamentoDAO.java
