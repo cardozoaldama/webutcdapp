@@ -31,6 +31,7 @@
 					<div class="offcanvas-body">
 						<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
 							<li class="nav-item"><a class="nav-link active" aria-current="page" href="departamento?action=registrarDepartamentos">Insertar departamento</a></li>
+							<li class="nav-item"><a class="nav-link active" aria-current="page" href="departamento?action=mostrarDepartamentos">Listar departamentos</a></li>
 							<li class="nav-item"><a class="nav-link active" aria-current="page" href="usuario?tipo=cerrarSesion">Cerrar Sesión</a></li>					
 						</ul>
 					</div>
