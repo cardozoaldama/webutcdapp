@@ -10,6 +10,8 @@ import java.util.List;
 import conexion.Conexion;
 import entidad.Departamento;
 
+// En DAO se hacen las operaciones básicas...
+
 public class DepartamentoDAO {
 
 	private Conexion con;
@@ -19,19 +21,19 @@ public class DepartamentoDAO {
 		System.out.println(URL);
 		con = new Conexion();
 	}
-
+	
 	// Listar los departamentos
 	public List<Departamento> listarDepartamentos() throws SQLException {
 
 		List<Departamento> listaArticulos = new ArrayList<>();
-		String sql = "SELECT id_departamento, nombre, observacion FROM departamento";
+		String sql = "SELECT iddepartamento, nombre, observacion FROM sys_departamento";
 		con.conectar();
 		connection = con.getJdbcConnection();
 		Statement statement = connection.createStatement();
 		ResultSet resulSet = statement.executeQuery(sql);
 
 		while (resulSet.next()) {
-			Integer iddepartamento = resulSet.getInt("id_departamento");
+			Integer iddepartamento = resulSet.getInt("iddepartamento");
 			String nombre = resulSet.getString("nombre");
 			String observacion = resulSet.getString("observacion");
 			Departamento departamento = new Departamento(iddepartamento, nombre, observacion);
