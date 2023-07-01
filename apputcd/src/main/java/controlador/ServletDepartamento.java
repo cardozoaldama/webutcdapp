@@ -78,6 +78,7 @@ public class ServletDepartamento extends HttpServlet {
 				showEditar(request, response);
 				break;
 			case "editar":
+				System.out.println("Editar un DEPARTAMENTO en ServletDepartamento.java");
 				editar(request, response);
 				break;
 			default:
@@ -151,7 +152,6 @@ public class ServletDepartamento extends HttpServlet {
 	// El índice principal...
 	private void index(HttpServletRequest request, HttpServletResponse response)
 			throws SQLException, ServletException, IOException {
-		// mostrar(request, response);
 		RequestDispatcher dispatcher = request.getRequestDispatcher("principal.jsp");
 		dispatcher.forward(request, response);
 	}
