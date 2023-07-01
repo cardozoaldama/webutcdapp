@@ -80,9 +80,27 @@ public class DepartamentoDAO {
 					}
 				}
 				// Si no hay registros en la tabla, retorna un valor predeterminado.
-				return 0;
+			return 0;
+		}
+		
+		// OBTENER POR ID:
+		public Departamento obtenerPorId(int iddepartamento) throws SQLException {
+			Departamento departamento = null;
+			String sql = "SELECT * FROM sys_departamento WHERE iddepartamento=?";
+			con.conectar();
+			connection = con.getJdbcConnection();
+			PreparedStatement statement = connection.prepareStatement(sql);
+			statement.setInt(1, iddepartamento);
+			ResultSet res = statement.executeQuery();
+			if(res.next()) {
+				departamento = new Departamento(res.getInt("iddepartamento"), res.getString("nombre"), res.getString("observacion"));
 			}
-	
+			res.close();
+			con.desconectar();
+			
+			return departamento;
+		}
+			
 	// Listar los departamentos
 	public List<Departamento> listarDepartamentos() throws SQLException {
 
