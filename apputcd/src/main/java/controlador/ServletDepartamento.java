@@ -69,6 +69,10 @@ public class ServletDepartamento extends HttpServlet {
 				System.out.println("Entrando en mostrarDepartamentos en ServletDepartamento.java");
 				mostrarDepartamentos(request, response);
 				break;
+			case "eliminar":
+				System.out.println("Eliminar en ServletDepartamento.java");
+				eliminar(request, response);
+				break;
 			default:
 				break;
 			}
@@ -76,6 +80,15 @@ public class ServletDepartamento extends HttpServlet {
 			e.getStackTrace();
 		}
 
+	}
+
+	private void eliminar(HttpServletRequest request, HttpServletResponse response) throws SQLException, ServletException, IOException {
+		Departamento departamento = departamentoDAO.obtenerPorId(Integer.parseInt(request.getParameter("id")));
+		System.out.println("id " + departamento);
+		departamentoDAO.actualizarInactivar(departamento, request);
+		RequestDispatcher dispatcher = request.getRequestDispatcher("principal.jsp");
+		dispatcher.forward(request, response);
+		
 	}
 
 	private void mostrarDepartamentos(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException {
