@@ -140,7 +140,7 @@ public class DepartamentoDAO {
 	// Listar los departamentos
 	public List<Departamento> listarDepartamentos() throws SQLException {
 		List<Departamento> listaDepartamentos = new ArrayList<>();
-		String sql = "SELECT iddepartamento, nombre, observacion FROM sys_departamento";
+		String sql = "SELECT iddepartamento, nombre, observacion FROM sys_departamento WHERE activo='S'";
 		con.conectar();
 		connection = con.getJdbcConnection();
 		Statement statement = connection.createStatement();
