@@ -77,6 +77,9 @@ public class ServletDepartamento extends HttpServlet {
 				System.out.println("Editar un elemento en ServletDepartamento.java");
 				showEditar(request, response);
 				break;
+			case "editar":
+				editar(request, response);
+				break;
 			default:
 				break;
 			}
@@ -84,6 +87,13 @@ public class ServletDepartamento extends HttpServlet {
 			e.getStackTrace();
 		}
 
+	}
+
+	// En la vista editarDepartamentos.jsp, esto acciona la edición.
+	private void editar(HttpServletRequest request, HttpServletResponse response) throws SQLException, ServletException, IOException {
+		Departamento departamento = new Departamento(Integer.parseInt(request.getParameter("id")), request.getParameter("nombre"), request.getParameter("observacion"));
+		departamentoDAO.actualizar(departamento, request);
+		index(request, response);		
 	}
 
 	// Muestra la vista de editarDepartamentos.jsp
