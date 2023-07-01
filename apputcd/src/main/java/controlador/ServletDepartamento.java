@@ -60,9 +60,11 @@ public class ServletDepartamento extends HttpServlet {
 				break;
 			case "registrarDepartamentos":
 				registrarDepartamentos(request, response);
+				break;
 			case "register":
 				System.out.println("Entrando... Registrando... Departamento...");
 				registrar(request, response);
+				break;
 			default:
 				break;
 			}
