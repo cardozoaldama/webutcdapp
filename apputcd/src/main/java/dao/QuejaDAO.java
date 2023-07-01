@@ -15,11 +15,9 @@ import javax.servlet.http.HttpServletRequest;
 import conexion.Conexion;
 import entidad.Queja;
 
-// TODO: Agregar los mismo que hay en ArticuloDAO.java
-
 public class QuejaDAO {
 
-	// Para realizar las conexiones, no sé...
+	// Para realizar las conexiones respectivas.
 	private Conexion con;
 	private Connection connection;
 
@@ -54,7 +52,6 @@ public class QuejaDAO {
 		statement.setString(2, queja.getNombre());
 		statement.setString(3, queja.getApellido());
 		statement.setString(4, queja.getTelefono());
-		// statement.setInt(5, queja.getNis());
 		statement.setString(5, queja.getDepartamento());
 		statement.setString(6, queja.getCiudad());
 		statement.setString(7, queja.getBarrio());
@@ -67,11 +64,11 @@ public class QuejaDAO {
 
 		statement.setString(12, activoS);
 
-		// Para obtener e insertar el usuario de sesión
+		// Para obtener e insertar el usuario de sesión,
 	    String usuarioCreacion = request.getParameter("nombre");
 	    statement.setString(13, usuarioCreacion);
 
-	    // Para obtener e insertar el usuario de sesión
+	    // Para obtener e insertar el usuario de sesión.
 	    String usuarioModificacion = request.getParameter("nombre");
 		statement.setString(14, usuarioModificacion);
 
@@ -118,7 +115,7 @@ public class QuejaDAO {
 				return resultSet.getInt(1);
 			}
 		}
-		// Si no hay registros en la tabla, retorna un valor predeterminado
+		// Si no hay registros en la tabla, retorna un valor predeterminado.
 		return 0;
 	}
 
@@ -169,7 +166,7 @@ public class QuejaDAO {
 		return rowActualizar;
 	}
 
-	// Por ahora hace la eliminación y no inactivación
+	// Realiza una inactivación.
 	public boolean actualizarInactivar(Queja queja, HttpServletRequest request) throws SQLException {
 		boolean rowInactivar = false;
 		String sql = "UPDATE sys_reclamo_aux SET activo=?, usuario_modificacion=?, fecha_hora_recepcion=? WHERE idreclamo=?";
