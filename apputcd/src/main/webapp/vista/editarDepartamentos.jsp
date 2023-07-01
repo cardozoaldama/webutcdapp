@@ -45,7 +45,7 @@
 				</tr>
 				<!-- ACTION BUTTONS -->
 				<tr>
-					<td><input type="submit" value="Actualizar" name="agregar" onclick="limpiarCampos()"></td>	
+					<td><input type="submit" value="Actualizar" name="agregar"></td>	
 					<td><input type="button" onclick="redirigirPrincipal()" value="Cancelar" name="cancelar" /></td>	
 				</tr>
 			</table>
