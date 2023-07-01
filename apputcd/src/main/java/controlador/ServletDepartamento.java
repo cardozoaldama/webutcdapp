@@ -82,15 +82,16 @@ public class ServletDepartamento extends HttpServlet {
 
 	}
 
+	// Inactiva un elemento del departamento, pero no lo elimina.
 	private void eliminar(HttpServletRequest request, HttpServletResponse response) throws SQLException, ServletException, IOException {
 		Departamento departamento = departamentoDAO.obtenerPorId(Integer.parseInt(request.getParameter("id")));
 		System.out.println("id " + departamento);
 		departamentoDAO.actualizarInactivar(departamento, request);
 		RequestDispatcher dispatcher = request.getRequestDispatcher("principal.jsp");
 		dispatcher.forward(request, response);
-		
 	}
 
+	// Muestra la lista de departamentos dentro de mostrarDepartamentos.jsp.
 	private void mostrarDepartamentos(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException {
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/vista/mostrarDepartamentos.jsp");
 		List<Departamento> listaDepartamentos = departamentoDAO.listarDepartamentos();
@@ -125,6 +126,7 @@ public class ServletDepartamento extends HttpServlet {
 		doGet(request, response);
 	}
 
+	// El índice principal...
 	private void index(HttpServletRequest request, HttpServletResponse response)
 			throws SQLException, ServletException, IOException {
 		// mostrar(request, response);
@@ -132,6 +134,7 @@ public class ServletDepartamento extends HttpServlet {
 		dispatcher.forward(request, response);
 	}
 
+	// Esto es temporal, pero posiblemente se tenga que borrar. >;3
 	private void mostrar(HttpServletRequest request, HttpServletResponse response)
 			throws SQLException, IOException, ServletException {
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/vista/combo_datos.jsp");
