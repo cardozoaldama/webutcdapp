@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import dao.DepartamentoDAO;
 import entidad.Departamento;
+import entidad.Queja;
 
 @WebServlet("/departamento")
 public class ServletDepartamento extends HttpServlet {
@@ -59,6 +60,9 @@ public class ServletDepartamento extends HttpServlet {
 				break;
 			case "registrarDepartamentos":
 				registrarDepartamentos(request, response);
+			case "register":
+				System.out.println("Entrando... Registrando... Departamento...");
+				registrar(request, response);
 			default:
 				break;
 			}
@@ -66,6 +70,15 @@ public class ServletDepartamento extends HttpServlet {
 			e.getStackTrace();
 		}
 
+	}
+
+	// Literalmente realiza el registro junto a DepartamentoDAO.java
+	private void registrar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException {
+		Departamento departamento = new Departamento(0, request.getParameter("nombre"), request.getParameter("observacion"));
+		departamentoDAO.insertar(departamento, request);
+		request.setAttribute("mensaje", "Los datos se insertaron correctamente en el ServletDepartamento.java");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/vista/insertarDepartamentos.jsp");
+		dispatcher.forward(request, response);		
 	}
 
 	// Procedimiento que permite visualizar el JSP para insertar un departamento.
