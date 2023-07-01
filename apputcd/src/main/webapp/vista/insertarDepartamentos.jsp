@@ -11,7 +11,9 @@
 		<h1>Insertar datos</h1>
 		<form action="departamento?action=register" method="post">
 			<label for="departamento">Insertar departamento</label>
-			<input type="text" id="departamento" name="departamento" placeholder="Ej.: Concepción" >
+			<input type="text" id="departamento" name="nombre" placeholder="Ej.: Concepción" >
+			<label for="observacion">Observación:</label>
+			<input type="text" id="observacion" name="observacion" placeholder="Prueba">
 			<input type="submit" value="Enviar datos" name="agregar" onclick="limpiarCampos()" class="btn btn-success btn-block btn-lg">
 			<input type="button" onclick="redirigirPrincipal()" class="btn btn-danger btn-block btn-lg" value="Cancelar" name="cancelar" />
 		</form>
