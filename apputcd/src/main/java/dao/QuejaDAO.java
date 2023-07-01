@@ -76,7 +76,7 @@ public class QuejaDAO {
 		statement.setString(14, usuarioModificacion);
 
 		boolean rowInserted = statement.executeUpdate() > 0;
-		System.out.println("Articulo registrado into QuejaDAO");
+		System.out.println("Queja registrada en QuejaDAO");
 		statement.close();
 		con.desconectar();
 		return rowInserted;
