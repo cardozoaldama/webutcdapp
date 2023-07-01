@@ -104,7 +104,7 @@ public class DepartamentoDAO {
 		// Actualizar Departamentos
 		public boolean actualizar(Departamento departamento, HttpServletRequest request) throws SQLException {
 			boolean rowActualizar = false;
-			String sql = "UPDATE sys_departamento SET nombre=?, observacion=?, fecha_hora_recepcion=?, usuario_modificacion=?, WHERE iddepartamento=?";
+			String sql = "UPDATE sys_departamento SET nombre=?, observacion=?, fecha_hora_recepcion=?, usuario_modificacion=? WHERE iddepartamento=?";
 			con.conectar();
 			connection = con.getJdbcConnection();
 			PreparedStatement statement = connection.prepareStatement(sql);
@@ -114,6 +114,7 @@ public class DepartamentoDAO {
 			String usuarioModificacion = request.getParameter("nombre");
 			statement.setString(4, usuarioModificacion);
 			statement.setInt(5, departamento.getIddepartamento());
+			rowActualizar = statement.executeUpdate() > 0;
 			statement.close();
 			con.desconectar();
 			return rowActualizar;
