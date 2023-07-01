@@ -73,6 +73,10 @@ public class ServletDepartamento extends HttpServlet {
 				System.out.println("Eliminar en ServletDepartamento.java");
 				eliminar(request, response);
 				break;
+			case "showedit":
+				System.out.println("Editar un elemento en ServletDepartamento.java");
+				showEditar(request, response);
+				break;
 			default:
 				break;
 			}
@@ -80,6 +84,14 @@ public class ServletDepartamento extends HttpServlet {
 			e.getStackTrace();
 		}
 
+	}
+
+	// Muestra la vista de editarDepartamentos.jsp
+	private void showEditar(HttpServletRequest request, HttpServletResponse response) throws SQLException, ServletException, IOException {
+		Departamento departamento = departamentoDAO.obtenerPorId(Integer.parseInt(request.getParameter("id")));
+		request.setAttribute("departamento", departamento);
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/vista/editarDepartamentos.jsp");
+		dispatcher.forward(request, response);
 	}
 
 	// Inactiva un elemento del departamento, pero no lo elimina.
