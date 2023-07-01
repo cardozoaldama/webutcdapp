@@ -79,7 +79,7 @@ public class QuejaDAO {
 		return rowInserted;
 	}
 
-	// LISTAR TODOS LAS QUEJAS
+	// LISTAR TODAS LAS QUEJAS
 	public List<Queja> listarQuejas() throws SQLException {
 		List<Queja> listaQuejas = new ArrayList<>();
 		String sql = "SELECT * FROM sys_reclamo_aux WHERE activo='S'";
