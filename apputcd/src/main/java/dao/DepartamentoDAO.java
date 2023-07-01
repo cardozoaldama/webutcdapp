@@ -119,6 +119,24 @@ public class DepartamentoDAO {
 			return rowActualizar;
 		}
 		
+		// INACTIVACIÓN DEL DEPARTAMENTO
+		public boolean actualizarInactivar(Departamento departamento, HttpServletRequest request) throws SQLException {
+			boolean rowInactivar = false;
+			String sql = "UPDATE sys_departamento SET activo=?, usuario_modificacion=?, fecha_hora_recepcion=? WHERE iddepartamento=?";
+			con.conectar();
+			connection = con.getJdbcConnection();
+			PreparedStatement statement = connection.prepareStatement(sql);
+			statement. setString(1, inactivoN);
+			String usuarioModificacion = request.getParameter("nombre");
+			statement.setString(2, usuarioModificacion);
+			statement.setTimestamp(3, timestamp);
+			statement.setInt(4, departamento.getIddepartamento());
+			rowInactivar = statement.executeUpdate() > 0;
+			statement.close();
+			con.desconectar();
+			return rowInactivar;
+		}
+		
 	// Listar los departamentos
 	public List<Departamento> listarDepartamentos() throws SQLException {
 
