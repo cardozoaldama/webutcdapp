@@ -52,8 +52,8 @@
 								<td><c:out value="${departamento.nombre}"/></td>
 								<td><c:out value="${departamento.observacion}"/></td>
 								<td><c:out value="${departamento.codigo}"/></td>
-								<td><a href="departamento?action=showedit&id=<c:out value="${departamento.idreclamo}" />">Editar</a></td>
-								<td><a href="departamento?action=eliminar&id=<c:out value="${departamento.idreclamo}"/>">Inactivar</a> </td>	
+								<td><a href="departamento?action=showedit&id=<c:out value="${departamento.iddepartamento}" />">Editar</a></td>
+								<td><a href="departamento?action=eliminar&id=<c:out value="${departamento.iddepartamento}"/>">Inactivar</a> </td>	
 							</tr>
 						</c:forEach>
 	            	</tbody>
