@@ -42,7 +42,6 @@
 	                    <tr>
 	                        <th>Nombre</th>
 							<th>Observación</th>
-							<th>Código</th>
 							<th colspan=2>Acciones</th>
 	                	</tr>
 	                </thead>
@@ -51,7 +50,6 @@
 							<tr>
 								<td><c:out value="${departamento.nombre}"/></td>
 								<td><c:out value="${departamento.observacion}"/></td>
-								<td><c:out value="${departamento.codigo}"/></td>
 								<td><a href="departamento?action=showedit&id=<c:out value="${departamento.iddepartamento}" />">Editar</a></td>
 								<td><a href="departamento?action=eliminar&id=<c:out value="${departamento.iddepartamento}"/>">Inactivar</a> </td>	
 							</tr>
