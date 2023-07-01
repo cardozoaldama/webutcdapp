@@ -25,7 +25,6 @@ public class ServletDepartamento extends HttpServlet {
 		String jdbcUsername = getServletContext().getInitParameter("USUARIO");
 		String jdbcPassword = getServletContext().getInitParameter("CLAVE");
 		try {
-
 			departamentoDAO = new DepartamentoDAO(jdbcURL, jdbcUsername, jdbcPassword);
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -58,6 +57,8 @@ public class ServletDepartamento extends HttpServlet {
 			case "mostrar":
 				mostrar(request, response);
 				break;
+			case "registrarDepartamentos":
+				registrarDepartamentos(request, response);
 			default:
 				break;
 			}
@@ -65,6 +66,12 @@ public class ServletDepartamento extends HttpServlet {
 			e.getStackTrace();
 		}
 
+	}
+
+	// Procedimiento que permite visualizar el JSP para insertar un departamento.
+	private void registrarDepartamentos(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException {
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/vista/insertarDepartamentos.jsp");
+		dispatcher.forward(request, response);		
 	}
 
 	/**
